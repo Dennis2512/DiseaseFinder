@@ -13,5 +13,5 @@ Recommended, local doctors will be displayed.
 * Multiregional
 
 ## **The Team:**
-* Arthur Siebert @arthuraddamssiebert
+* Arthur Siebert @ArthurAddamsSiebert
 * Dennis Neumann @Dennis2512
