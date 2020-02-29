@@ -2,7 +2,7 @@
 
 ## **Task:**
 
-Develop a german platform where users can explain their symptoms and complaints to figure out what disease they have.
+Develop a platform where users can explain their symptoms and complaints to figure out what disease they have.
 Recommended, local doctors will be displayed.
 
 ## **Nice to Have`s:**
