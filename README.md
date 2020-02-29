@@ -1,4 +1,4 @@
-### DiseaseFinder
+# DiseaseFinder
 
 ## **Task:**
 
