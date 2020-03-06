@@ -15,4 +15,4 @@ Recommended, local doctors will be displayed.
 ## **The Team:**
 * Arthur Siebert @ArthurAddamsSiebert
 * Dennis Neumann @Dennis2512
-* Tobias Bergmeier @MrNomNom
+* Tobias Bergmeier @MrNomNom98
