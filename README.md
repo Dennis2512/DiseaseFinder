@@ -16,3 +16,6 @@ Recommended, local doctors will be displayed.
 * Arthur Siebert @ArthurAddamsSiebert
 * Dennis Neumann @Dennis2512
 * Tobias Bergmeier @MrNomNom98
+
+## **The Idea:**
+![Concept_Idea](https://github.com/Dennis2512/DiseaseFinder/blob/master/assets/DiseaseFinder_Konzept.png?raw=true)
