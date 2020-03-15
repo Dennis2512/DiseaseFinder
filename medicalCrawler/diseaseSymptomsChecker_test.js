@@ -24,7 +24,8 @@ Scenario('Check Diseases and Symptoms', async (I) => {
 
     async function clickItem(){
         try{
-            for(i = 1; i <= 488; i++){ // von 1 bis 488 Krankheiten
+            for(i = 1; i <= 30; i++){ // von 1 bis 488 Krankheiten
+                await ichWarte(5000)
                 openTab();
                 I.click('#central-content > div > div > div > span > div > div > div.hasSlimScroll > table > tbody > tr:nth-child(' + i + ') > td:nth-child(2) > a');
                 let diseaseSource = await I.grabHTMLFrom('//*[@id="dialog"]');
@@ -48,8 +49,16 @@ Scenario('Check Diseases and Symptoms', async (I) => {
             }
                             
         }
+
+        async function ichWarte(ms) {
+            return new Promise((resolve) =>
+            setTimeout(resolve,ms)
+            )
+        }
         
     }
+
+    
 
     /*async function savePage(value, index, array){
         try{
