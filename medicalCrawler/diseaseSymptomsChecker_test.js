@@ -8,28 +8,29 @@ Scenario('Check Diseases and Symptoms', async (I) => {
 
     let pageSource = await I.grabSource();
 
-    const diseases = await I.grabTextFrom(locate('a').withAttr({ class: 'davis' }));
+    const diseases = await I.grabTextFrom(locate('a').withAttr({class: 'davis'}));
 
-    fs.mkdir('HTML', async function() {
+    /*fs.mkdir('HTML', async function() {
         fs.writeFile('./HTML/index.txt', pageSource, function(err, result) {
             if(err) console.log('error', err);
         });
         console.log("Index-Datei wurde erstellt.");
         //diseases.forEach(savePage);
-    }    
-              
-    );
+    }); */
 
-    clickItem();
+    await clickItem();
 
     async function clickItem(){
         try{
-            for(i = 1; i <= 30; i++){ // von 1 bis 488 Krankheiten
-                await ichWarte(5000)
+            for(i = 1; i <= 5; i++){ // von 1 bis 488 Krankheiten
+                I.wait(5);
+                // await ichWarte(5000)
                 openTab();
                 I.click('#central-content > div > div > div > span > div > div > div.hasSlimScroll > table > tbody > tr:nth-child(' + i + ') > td:nth-child(2) > a');
+                I.wait(3);
                 let diseaseSource = await I.grabHTMLFrom('//*[@id="dialog"]');
-                //console.log(diseaseSource);
+                I.wait(3);
+                console.log(diseaseSource);
                 fs.writeFile('./HTML/' + i + '.txt', diseaseSource, function (err, result) {
                     if (err)
                         console.log('error', err);
@@ -57,8 +58,6 @@ Scenario('Check Diseases and Symptoms', async (I) => {
         }
         
     }
-
-    
 
     /*async function savePage(value, index, array){
         try{
