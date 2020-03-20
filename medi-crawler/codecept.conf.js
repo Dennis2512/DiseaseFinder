@@ -10,7 +10,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://legacy.priaid.ch/de-ch',
-      show: true
+      show: false
     }
   },
   include: {
