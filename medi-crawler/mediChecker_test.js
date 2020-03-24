@@ -21,14 +21,14 @@ Scenario('mediCheck', async (I) => {
 });
 
 async function clickItem(I){
-    const currentPosition = 389; // This can be adjusted as you collect in tranches
+    const currentPosition = 448; // This can be adjusted as you collect in tranches
     try{
-        for(i = 1; i <= 410; i++){ // 1 to 488 diseases
+        for(i = 1; i <= 448; i++){ // 1 to 448 diseases
             if (i < currentPosition) {
                 continue;
             }
             I.wait(5);
-            await openTab(I);
+            await goBackToMainPage(I);
             I.click('#central-content > div > div > div > span > div > div > div.hasSlimScroll > table > tbody > tr:nth-child(' + i + ') > td:nth-child(2) > a');
             const seconds = getRandomNumberToWaitInSeconds(3, 22);
             I.say('I will sleep for ${seconds} seconds.')
@@ -46,7 +46,7 @@ async function clickItem(I){
     }
 }
 
-async function openTab(I){
+async function goBackToMainPage(I){
     try{
         I.amOnPage('/glossar');
     } catch(err) {
@@ -59,4 +59,4 @@ function getRandomNumberToWaitInSeconds(min, max) {
     return Math.round(Math.random() * (max - min) + min)
 }
 
-// Ausführen: npm run start
+// Ausführen: npm start
