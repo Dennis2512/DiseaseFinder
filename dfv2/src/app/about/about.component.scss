@@ -1,0 +1,16 @@
+$backgroundcol: rgba(204, 204, 204, 0.226);
+
+.about{
+    background-color: $backgroundcol;
+    width: 230px;
+    border-radius: 5px;
+    border:1px solid #4acfbb00;
+    
+}
+.about:hover{
+    border:1px solid #4acfbb80;
+}
+.aboutdis{
+    margin-top: -20px;  
+    
+}

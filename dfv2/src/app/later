@@ -1,0 +1,6 @@
+<button mat-icon-button (click)="opened=!opened">   </button> 
+
+
+<div class="menu_icon">
+        <mat-icon class="menu_icon_plus" id="menu_toggle" (click)="opened=!opened" >menu</mat-icon>
+    </div>

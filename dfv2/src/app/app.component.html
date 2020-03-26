@@ -1,0 +1,67 @@
+<DIV id="everyth">
+  
+<div class="footerpurpose">
+  
+  <header>
+
+<div class="menu_icon" (click)="opened=!opened">
+  <button class="menu-toggle" id="menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu</span>
+    <svg class="icon icon-menu-toggle" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+        <g class="svg-menu-toggle">
+            <path class="line line-1" d="M5 13h90v14H5z"/>
+            <path class="line line-2" d="M5 43h90v14H5z"/>
+            <path class="line line-3" d="M5 73h90v14H5z"/>
+        </g>
+    </svg>
+</button>
+</div>
+    
+
+
+    
+    <div class="logo"> 
+    <a routerLink="/">DiseaseFinder Alpha v.0.3.0</a>
+      </div>
+    
+  
+  <div class="container">
+    
+  </div>
+  </header>
+  
+  <mat-sidenav-container>
+    <mat-sidenav mode="push" [(opened)]="opened">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/" class="listItems" (click)="opened=!opened">Home</a>
+        <a mat-list-item routerLink="/story" class="listItems" (click)="opened=!opened">Über uns</a>
+        <a mat-list-item routerLink="/about" class="listItems" (click)="opened=!opened">Impressum</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      
+      <body>
+        <div width="100%" class="motto">
+          <a class="motto">We don't cure cancer, but we sure come close.</a>
+        </div>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+
+
+      <script type="text/javascript" src="firebaseids.js"></script>
+      
+      </body>
+      
+      
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div class="footerDiv" id="footer">
+  <div class="card-footer text-muted">
+    SBN Communications GbR
+  </div>
+</div>
+
+</DIV>
