@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -8,19 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   searchUp: boolean = false;
+  Symptominput = null;
 
-  constructor() { }
+
+  OnSymptomInput(event){
+    this.Symptominput = event.value;
+    console.log(this.Symptominput);
+  }
+
+  constructor(/*private http: HttpClient*/) { }
 
   ngOnInit(): void {
   }
-  data:{
-    symptom1: string;
-  }
 
-  searchBarUp(data){
-    data.toString();
+  searchBarUp(data: string){
     this.searchUp = true;
-    console.log(data);
+
+    this.Symptominput = data;
+    console.log(this.Symptominput);
+
+    //this.http.post();
   }
   
 
