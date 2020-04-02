@@ -13,9 +13,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  data:{
+    symptom1: string;
+  }
 
-  searchBarUp(){
+  searchBarUp(data){
+    data.toString();
     this.searchUp = true;
+    console.log(data);
   }
   
 

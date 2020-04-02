@@ -1,9 +1,9 @@
 <br>
 <div [class.center]="searchUp==false">
   <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Symptom(e)" aria-label="inputSymphthom" aria-describedby="basic-addon2">
+      <input type="text" #symptomInput class="form-control" placeholder="Symptom(e)" aria-label="inputSymphthom" aria-describedby="basic-addon2">
       <div class="input-group-append">
-        <button class="btn btn-prime backgroundcolorsubbutton" type="button" (click)="searchBarUp()">Suche</button>
+        <button class="btn btn-prime backgroundcolorsubbutton" type="button" (click)="searchBarUp(symptomInput.value)">Suche</button>
       </div>
     </div>
     <small id="Disclaimer" class="form-text text-muted">
