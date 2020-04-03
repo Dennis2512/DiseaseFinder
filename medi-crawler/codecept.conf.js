@@ -9,7 +9,8 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'https://legacy.priaid.ch/de-ch',
+      url: 'https://legacy.priaid.ch/de-ch',        // German (GER)
+      // url: 'https://legacy.priaid.ch/en-gb',     // English (EN)
       show: false
     }
   },
