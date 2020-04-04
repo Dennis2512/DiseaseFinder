@@ -2,11 +2,14 @@ Feature('mediChecker');
 
 const fs = require('fs');
 
+let language = "EN";   // Define language for file name (GER, EN)
+
 iWantSourceCode = false;    // If you want to save the pages HTML Code to .txt files, set "true"
 
 Scenario('mediCheck', async (I) => {
 
-    I.amOnPage('/glossar');
+    // I.amOnPage('/glossar');   // GER
+    I.amOnPage('/glossary');  // EN
     
     if(iWantSourceCode) {
         let pageSource = await I.grabSource();
@@ -55,8 +58,8 @@ async function clickItem(I){
 }
 
 async function createHtmlFolder(pageSource) {
-    fs.mkdir('HTML', async function() {
-        fs.writeFile('./HTML/index.txt', pageSource, (err) => {
+    fs.mkdir('HTML' + language, async function() {
+        fs.writeFile('./HTML' + language + '/index.txt', pageSource, (err) => {
             if(err) console.log('error', err);
         });
         console.log("Index-Datei wurde erstellt.");
@@ -65,18 +68,17 @@ async function createHtmlFolder(pageSource) {
 }
 
 function createHtmlFiles(i, diseaseSource) {
-    fs.writeFile('./HTML/' + i + '.txt', diseaseSource, (err) => {
+    fs.writeFile('./HTML' + language + '/' + i + '.txt', diseaseSource, (err) => {
         if (err)
             console.log('error', err);
     });
 }
 
 async function generateJSONwithAllDiseases(disease_name, disease_name_professional, description, symptoms, i, maxAnzDiseases) {
-    let language = "GER";   // Define language for file name (GER, EN)
     const fileWithData = '../assets/allDiseases' + language + '.json';
 
     let symptomsString = symptoms;
-    let symptomsArray = symptomsString.split(",");
+    let symptomsArray = symptomsString.split(", ");
     console.log(symptomsArray.length);
     console.log(symptomsArray);
     let s = symptomsArray.length;
@@ -90,6 +92,10 @@ async function generateJSONwithAllDiseases(disease_name, disease_name_profession
         endOfFile = '\n' + "]";
     } else {
         endOfFile = ",";
+    }
+
+    if (description.indexOf("\"") > -1) {
+        description = description.replace(/"/g, "'")
     }
 
     let d_name = "{" + '\n' + "\"disease_name\": \"" + disease_name + "\"," + '\n';
@@ -111,7 +117,7 @@ async function generateJSONwithAllDiseases(disease_name, disease_name_profession
                 if(err) console.log('error', err);
             });
             console.log("Krankheiten-Datei wurde initial erstellt.");
-            console.log("=======================================");
+            console.log("=========================================");
         }
     } catch(err) {
         console.error(err)
@@ -120,7 +126,8 @@ async function generateJSONwithAllDiseases(disease_name, disease_name_profession
 
 async function goBackToMainPage(I) {
     try{
-        I.amOnPage('/glossar');
+    // I.amOnPage('/glossar');   // GER
+    I.amOnPage('/glossary');  // EN
     } catch(err) {
         console.log(err);
     }
