@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-home',
@@ -9,26 +10,36 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   searchUp: boolean = false;
-  Symptominput = null;
+  symptomInput: string = null;
 
-
-  OnSymptomInput(event){
-    this.Symptominput = event.value;
-    console.log(this.Symptominput);
-  }
-
-  constructor(/*private http: HttpClient*/) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  searchBarUp(data: string){
+  searchBarUp(){
     this.searchUp = true;
+  }
 
-    this.Symptominput = data;
-    console.log(this.Symptominput);
+  OnSymptomsInput(symptom: string){
+    this.symptomInput = symptom;
+    console.log(this.symptomInput);
+  }
+  OnUpload(){
 
-    //this.http.post();
+    const fd = new FormData();
+    fd.append('symptom', this.symptomInput);
+    this.http.post('https://us-central1-diseasefinder.cloudfunctions.net/uploadFile', fd)
+      .subscribe(res => {
+      console.log (res);
+     });
+
+  }
+
+  functionsWrapper(symptIn: string){
+    this.searchBarUp();
+    this.OnSymptomsInput(symptIn);
+    this.OnUpload();
   }
   
 
