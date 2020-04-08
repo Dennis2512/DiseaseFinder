@@ -414,6 +414,12 @@
 "symptoms": ["Kopfschmerzen","Tränen","Nervosität","Nasenlaufen","Lichtüberempfindlichkeit","Übelkeit","Augenrötung","Lidschwellung","Erbrechen"]
 },
 {
+"disease_name": "Corona",
+"disease_name_professional": "COVID-19",
+"description": "COVID-19 (für englisch coronavirus disease 2019 ‚Coronavirus-Krankheit 2019‘) ist eine durch das Coronavirus SARS-CoV-2 verursachte Viruserkrankung. Sie wurde erstmals Ende des Jahres 2019 in Wuhan beschrieben, entwickelte sich im Januar 2020 in der Volksrepublik China zur Epidemie und breitete sich schließlich weltweit zur COVID-19-Pandemie aus. Sie verbreitet sich hauptsächlich durch Tröpfcheninfektion, wobei in Zimmern von Infizierten auch in der Raumluft Viren nachgewiesen wurden. Auf Oberflächen bleiben die Viruspartikel über Stunden bis Tage infektiös, sodass sie von Tastaturen, Tischen, Tür- und Haltegriffen über die Hände an die Schleimhäute von Mund und Nase gelangen können (Schmierinfektion). Dabei ist auch eine Ansteckung über die Bindehaut des Auges möglich. Ein klarer Beweis für eine solche nicht-aerogene Übertragung konnte bisher nicht erbracht werden.",
+"symptoms": ["Husten","Fieber","Müdigkeit","Schnupfen","Atembeschwerden (in schweren Fällen)","Beeinträchtigung des Geruchs-/Geschmackssinns"]
+},
+{
 "disease_name": "Darmgeschwür",
 "disease_name_professional": "Gutartiger Darmpolyp",
 "description": "Im Laufe des Lebens bekommen mehr als 30% der Menschen einen oder mehrere Polypen (Schleimhautvorwölbung) im Darm, mehr als 50% dieser Polypen befinden sich im Enddarm. Polypen können unterschiedlich aussehen, sie können gut- oder bösartig sein. Fast alle Polypen neigen aber dazu, zu entarten. Es gibt erbliche Erkrankungen (hereditäre Polyposis-Syndrome), bei denen es zu einem massiven Befall des End- und Dickdarms mit Polypen kommt.",

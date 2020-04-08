@@ -570,6 +570,12 @@
 "symptoms": ["Vision impairment","Blurred vision"]
 },
 {
+"disease_name": "Corona",
+"disease_name_professional": "COVID-19",
+"description": "COVID-19 (coronavirus disease 2019) is a viral disease caused by the coronavirus SARS-CoV-2. It was first described in Wuhan at the end of 2019, developed into an epidemic in the People's Republic of China in January 2020 and finally spread worldwide to become the COVID-19 pandemic. It spreads mainly by droplet infection, although viruses have also been detected in the air in rooms of infected persons. The virus particles remain infectious on surfaces for hours or days, so that they can reach the mucous membranes of the mouth and nose from keyboards, tables, door handles and handrails via the hands (smear infection). Infection via the conjunctiva of the eye is also possible. A clear proof of such a non-aerogenic transmission could not be provided so far.",
+"symptoms": ["Cough", "Fever", "Fatigue", "Rhinitis", "Breathing difficulties (in severe cases)", "Impairment of the sense of smell/taste"]
+},
+{
 "disease_name": "Coronary heart disease",
 "disease_name_professional": "Coronary artery disease",
 "description": "Coronary artery disease occurs when the major blood vessels, called coronary arteries, that supply the heart with nutrients, blood and oxygen become diseased or damaged. Deposits containing cholesterol in the arteries and inflammation are usually the reasons behind the condition since these deposits, called plaques, build up and narrow the coronary arteries. This decreases blood flow to the heart, causing shortness of breath, chest pain, or other symptoms and signs of coronary artery disease. A total blockage may trigger a heart attack. It can be difficult to notice the condition since coronary artery disease develops often over decades.",
