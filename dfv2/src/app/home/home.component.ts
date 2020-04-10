@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -25,21 +24,23 @@ export class HomeComponent implements OnInit {
     this.symptomInput = symptom;
     console.log(this.symptomInput);
   }
-  OnUpload(){
-
+  OnUpload(symptomUpload: string){
+    
+    this.symptomInput = symptomUpload;
     const fd = new FormData();
     fd.append('symptom', this.symptomInput);
-    this.http.post('https://us-central1-diseasefinder.cloudfunctions.net/uploadFile', fd)
-      .subscribe(res => {
-      console.log (res);
-     });
+    //this.http.post('https://us-central1-diseasefinder.cloudfunctions.net/uploadFile',fd)
+    //this.http.post('https://  localhost:')
+    //  .subscribe(res => {
+    //    console.log (res);
+    //  });
 
   }
 
   functionsWrapper(symptIn: string){
     this.searchBarUp();
     this.OnSymptomsInput(symptIn);
-    this.OnUpload();
+    this.OnUpload(symptIn);
   }
   
 
