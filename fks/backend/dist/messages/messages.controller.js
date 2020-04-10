@@ -21,7 +21,7 @@ let MessagesController = class MessagesController {
     }
     getMessage(id) {
         return {
-            message: `Hier ziehst du das spezielle Symptim mit id ${123}`
+            message: `Hier ziehst du das spezielle Symptim mit id ${id}`
         };
     }
 };

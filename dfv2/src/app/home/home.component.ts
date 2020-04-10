@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { UserService } from '../services/user.service';
+
+
+  //Setup for HTTPRequests
+  const httpOptions = {
+    headers: new Headers({
+      'Access-Control-Allow-Origin':'*',
+      'Authorization':'authkey',
+      'userid':'1'
+    })
+  }  
 
 @Component({
   selector: 'app-home',
@@ -8,12 +19,19 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
+//Data variables
+  public baseurl = 'http://localhost:3000';
   searchUp: boolean = false;
   symptomInput: string = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private user: UserService) { }
 
+
+//Functions
   ngOnInit(): void {
+    this.user.getMessages().subscribe((res) => {
+      console.log(res);
+    });
   }
 
   searchBarUp(){
@@ -26,21 +44,27 @@ export class HomeComponent implements OnInit {
   }
   OnUpload(symptomUpload: string){
     
-    this.symptomInput = symptomUpload;
+    /*this.symptomInput = symptomUpload;
     const fd = new FormData();
     fd.append('symptom', this.symptomInput);
-    //this.http.post('https://us-central1-diseasefinder.cloudfunctions.net/uploadFile',fd)
-    //this.http.post('https://  localhost:')
-    //  .subscribe(res => {
-    //    console.log (res);
-    //  });
-
+    this.http.get(this.baseurl)
+    this.http.post('https://  localhost:')
+      .subscribe(res => {
+        console.log (res);
+      });
+*/
+  }
+  OnDownload(){
+    this.user.getMessages().subscribe((res) => {
+      console.log(res);
+    });
   }
 
   functionsWrapper(symptIn: string){
     this.searchBarUp();
     this.OnSymptomsInput(symptIn);
-    this.OnUpload(symptIn);
+    //this.OnUpload(symptIn);
+    //this.OnDownload();
   }
   
 

@@ -1110,7 +1110,7 @@
         "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32"
       },
       "../src/messages/messages.controller.ts": {
-        "version": "905a91cf49d560e0e74387d6d1c80ab2a37c965896e1fd63eadee1dd9b84c38c",
+        "version": "e6196fc98320d1d3bfb9b8e7823f9fc297ec36a3917d540e09f9fa842149ffaa",
         "signature": "39f060a6e26b67d066a78f08b5e92cb1933ab581c29126cc6918ea3d572a2e1a"
       },
       "../src/app.module.ts": {
@@ -1262,7 +1262,7 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d"
       },
       "../src/main.ts": {
-        "version": "3c8967198a459fe0868276c735fb4ecbe75c3ed2bbda02d4dcee787c5c448528",
+        "version": "68cc936996c950ca5bc97ab0be91765a5403f091c61421bd575c8adad552c162",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
