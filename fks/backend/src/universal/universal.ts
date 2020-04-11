@@ -12,3 +12,4 @@
         b.Wenn ja, gebe Daten von Praxis an Client
             -Gebe immer Allgemeinärzte mit
 4.  Lass den Crowler 1mal die Woche laufen um neue Daten in die DB zu schreiben.
+*/
