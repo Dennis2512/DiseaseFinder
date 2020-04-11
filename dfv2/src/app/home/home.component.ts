@@ -20,7 +20,6 @@ import { UserService } from '../services/user.service';
 export class HomeComponent implements OnInit {
 
 //Data variables
-  public baseurl = 'http://localhost:3000';
   searchUp: boolean = false;
   symptomInput: string = null;
 
@@ -29,7 +28,7 @@ export class HomeComponent implements OnInit {
 
 //Functions
   ngOnInit(): void {
-    this.user.getMessages().subscribe((res) => {
+    this.user.getMessage('1').subscribe((res) => {
       console.log(res);
     });
   }
@@ -38,33 +37,36 @@ export class HomeComponent implements OnInit {
     this.searchUp = true;
   }
 
-  OnSymptomsInput(symptom: string){
-    this.symptomInput = symptom;
+  OnSymptomsInput(symptoms: string){
+    this.symptomInput = symptoms;
     console.log(this.symptomInput);
   }
-  OnUpload(symptomUpload: string){
-    
-    /*this.symptomInput = symptomUpload;
-    const fd = new FormData();
-    fd.append('symptom', this.symptomInput);
-    this.http.get(this.baseurl)
-    this.http.post('https://  localhost:')
-      .subscribe(res => {
-        console.log (res);
-      });
-*/
-  }
-  OnDownload(){
-    this.user.getMessages().subscribe((res) => {
+
+
+  OnUpload(symptoms: string){
+    let symptomSend = {
+      symptom: symptoms
+    }
+
+    this.user.sendSymptoms(symptomSend).subscribe((res) => {
       console.log(res);
     });
   }
 
+  
+  OnDownload(){
+    this.user.getSymptoms().subscribe((res) => {
+      console.log(res);
+    });
+    
+  }
+  
+
   functionsWrapper(symptIn: string){
     this.searchBarUp();
     this.OnSymptomsInput(symptIn);
-    //this.OnUpload(symptIn);
-    //this.OnDownload();
+    this.OnUpload(symptIn);
+    this.OnDownload();
   }
   
 

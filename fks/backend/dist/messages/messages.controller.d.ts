@@ -1,8 +1,10 @@
+import { UserDto } from './user.dto';
 export declare class MessagesController {
-    getMessages(): {
+    getSymptoms(): {
         message: string;
     };
     getMessage(id: any): {
         message: string;
     };
+    sendSymptoms(user: UserDto): UserDto;
 }

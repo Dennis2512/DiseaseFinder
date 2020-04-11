@@ -23,6 +23,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     TextFieldModule,
     MatFormFieldModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,16 +13,28 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+const user_dto_1 = require("./user.dto");
 let MessagesController = class MessagesController {
-    getMessages() {
+    getSymptoms() {
         return {
             message: 'Hier kannst du die Symptome der Datenbank ziehen'
         };
     }
     getMessage(id) {
-        return {
-            message: `Hier ziehst du das spezielle Symptim mit id ${id}`
-        };
+        if (id == 1) {
+            return {
+                message: 'Herzlich Willkommen auf DiseaseFinder.com'
+            };
+        }
+        else {
+            return {
+                message: `some Message for ${id}`
+            };
+        }
+    }
+    sendSymptoms(user) {
+        console.log(user);
+        return user;
     }
 };
 __decorate([
@@ -30,7 +42,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], MessagesController.prototype, "getMessages", null);
+], MessagesController.prototype, "getSymptoms", null);
 __decorate([
     common_1.Get(':id'),
     __param(0, common_1.Param('id')),
@@ -38,6 +50,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], MessagesController.prototype, "getMessage", null);
+__decorate([
+    common_1.Post(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_dto_1.UserDto]),
+    __metadata("design:returntype", void 0)
+], MessagesController.prototype, "sendSymptoms", null);
 MessagesController = __decorate([
     common_1.Controller('messages')
 ], MessagesController);

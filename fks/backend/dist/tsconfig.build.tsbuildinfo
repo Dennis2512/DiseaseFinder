@@ -1109,9 +1109,13 @@
         "version": "3469c5aa62e1ba5b183d9bb9d40193e91aa761fc5734d332650b0bd49c346266",
         "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32"
       },
+      "../src/messages/user.dto.ts": {
+        "version": "ef59ec6d379d1b58947c6c58535dece8c2d82a4fe07e626855e125f49c2c7991",
+        "signature": "f1b2b7029df13e9911de416f435ad0b3282a24600d4b818cc04e444e88cfc59b"
+      },
       "../src/messages/messages.controller.ts": {
-        "version": "e6196fc98320d1d3bfb9b8e7823f9fc297ec36a3917d540e09f9fa842149ffaa",
-        "signature": "39f060a6e26b67d066a78f08b5e92cb1933ab581c29126cc6918ea3d572a2e1a"
+        "version": "ce1195da3b4ee6e8d80b29f84f8b207eb03b6ca5fc37e307fe90c6ac8b7755b4",
+        "signature": "0d1063276985844f5909895dd79c27c95a61aa0480e5dbc7df558c9ebf1149c8"
       },
       "../src/app.module.ts": {
         "version": "1c4f2ebf4ef2cb824dd3e0df330d63636f6990b83b2a437d7bfa0b606edb170f",
@@ -3644,8 +3648,15 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/messages/user.dto.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/messages/messages.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/messages/user.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -6481,6 +6492,9 @@
       ],
       "../src/app.controller.ts": [
         "../src/app.service.ts"
+      ],
+      "../src/messages/messages.controller.ts": [
+        "../src/messages/user.dto.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",

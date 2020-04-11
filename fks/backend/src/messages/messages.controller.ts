@@ -1,9 +1,10 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { UserDto } from './user.dto';
 
 @Controller('messages')
 export class MessagesController {
     @Get()
-    getMessages(){
+    getSymptoms(){
       return {
           message: 'Hier kannst du die Symptome der Datenbank ziehen'
       }
@@ -11,8 +12,21 @@ export class MessagesController {
 
     @Get(':id')
     getMessage(@Param('id') id){
-        return {
-            message: `Hier ziehst du das spezielle Symptim mit id ${id}`
+        if(id == 1){
+            return {
+                message: 'Herzlich Willkommen auf DiseaseFinder.com'
+            }
         }
+        else{
+            return{
+                message: `some Message for ${id}`
+            }
+        }  
+    }
+
+    @Post()
+    sendSymptoms(@Body() user: UserDto){
+        console.log(user);
+        return user;
     }
 }
