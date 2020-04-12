@@ -1,7 +1,5 @@
 runtime: nodejs
 env: flex
 
-env_variables.diseasefinder:europe-west3:diseasefindermariadb
-
 beta_settings:
 cloud_sql_instances: diseasefinder:europe-west3:diseasefindermariadb,
