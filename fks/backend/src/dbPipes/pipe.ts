@@ -1,0 +1,1 @@
+//Hier wird der SymptomInput an die Datenbank gesendet und die Daten an den Client zurück

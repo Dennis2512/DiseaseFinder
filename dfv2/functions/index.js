@@ -19,7 +19,7 @@ const cors = require('cors')({origin: true});
  exports.symptomsUpload = functions.https.onRequest((req, res) => {
      cors(req, res, () => {
         if(req.method !== 'POST'){
-            return response.status(500).json({
+            return res.status(500).json({
                 message: 'Not allowed'
             })
         }
