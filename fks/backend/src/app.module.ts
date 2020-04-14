@@ -5,14 +5,12 @@ import { MessagesController } from './messages/messages.controller';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { DbModule } from './dbPipes/db.module';
-
 
 @Module({
   imports: [
     //TypeOrmModule.forRoot({autoLoadEntities: true}),
     //DbModule
-    TypeOrmModule.forRoot({autoLoadEntities: true}),
+    TypeOrmModule.forRoot(),
   ],
   controllers: [AppController, MessagesController],
   providers: [AppService],
