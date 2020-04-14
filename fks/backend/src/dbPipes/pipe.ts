@@ -29,7 +29,7 @@ import { Test } from "@nestjs/testing";
 
     }
 })()
-*/
+
 createConnection()
     .then(async conn =>{
         const sympt1 = await TestEntity
@@ -39,3 +39,4 @@ createConnection()
                      symptoms: "Test_Symptom2"})
                      .save();
     })
+    */
