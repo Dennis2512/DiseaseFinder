@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
-import { UserDto } from './user.dto';
+import { ClientDto } from '../messages/user.dto';
 
 @Controller('messages')
 export class MessagesController {
@@ -25,7 +25,7 @@ export class MessagesController {
     }
 
     @Post()
-    sendSymptoms(@Body() user: UserDto){
+    sendSymptoms(@Body() user: ClientDto){
         console.log(user);
         return user;
     }
