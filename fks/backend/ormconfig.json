@@ -5,7 +5,7 @@
     "username": "root",
     "password": "diseasefinderdb",
     "database": "test",
-    "entities": ["dist/**/**.entity{.ts,.js}"],
+    "entities": ["./src/**/*.entitiy.ts", "./dist/**/*.entity.js"],
     "synchronize": true,
     "logging": true
   }
