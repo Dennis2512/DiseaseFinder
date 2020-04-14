@@ -8,7 +8,7 @@ import { async } from "rxjs/internal/scheduler/async";
         await getConnection()
             .createQueryBuilder()
             .insert()
-            .into(TestEntity)
+            .into('TEST_ENTITY')
             .values([
                 {disease_name: "Test_disease_Name1"},
                 {disease_name_professional: "Test_disease_name_professional1"},
