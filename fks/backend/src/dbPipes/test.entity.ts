@@ -18,5 +18,5 @@ export class TestEntity {
   //symptoms;
 
   @Column()
-  sympoms: string;
+  symptoms: string;
 }
