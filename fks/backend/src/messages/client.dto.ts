@@ -1,3 +1,3 @@
-export class UserDto {
+export class ClientDto {
     symptom: string;
 }
