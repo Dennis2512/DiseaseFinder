@@ -2,7 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import  {Logger} from '@nestjs/common'
 
-const port = process.env.port || 3000 || 80;
+//const port = process.env.port || 3000 || 80;
+const port = 80;
   const baseurl = 'http://35.234.114.16:';
   //const baseurl = 'http://localhost:'
 
