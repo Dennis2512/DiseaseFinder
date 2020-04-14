@@ -6,11 +6,17 @@ export class TestEntity {
   id: number;
 
   @Column()
-  firstName: string;
+  disease_name: string;
 
   @Column()
-  lastName: string;
+  disease_name_professional: string;
 
-  @Column({ default: true })
-  isActive: boolean;
+  @Column()
+  description: string;
+
+  //@Column( "varchar", {length: 512}) 
+  //symptoms;
+
+  @Column()
+  sympoms: string;
 }
