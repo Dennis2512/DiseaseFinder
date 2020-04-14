@@ -1,0 +1,64 @@
+$backgroundcol: rgba(204, 204, 204, 0.226);
+
+.pics{
+    background-color: $backgroundcol;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    border:1px solid #4acfbb00;
+}
+.pics:hover{
+    border:1px solid #4acfbb80;
+}
+
+img{
+    //width: 33%;
+    //height: 33%;
+}
+
+@media only screen and (min-width: 600px){
+    .pics{
+        background-color: $backgroundcol;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        border:1px solid #4acfbb00;
+        height: 550px;
+        overflow: hidden;
+    }
+    .pic1{
+        width: 33%;
+        height: 33%;
+    }
+    .pic2{
+        position: relative;
+        top: -391px;
+        left: 33%;
+        width: 33%;
+        height: 33%;
+    }
+    .pic3{
+        position: relative;
+        top: -783px;
+        left: 66%;
+        width: 33%;
+        height: 33%;
+    }
+    .text{
+        position: absolute;
+        top: 460px;
+        left: 17.5%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .text{
+        position: absolute;
+        top: 70px;
+        left: 37%;
+    }
+    img{
+        width: 33%;
+        height: 33%;
+    }
+}
