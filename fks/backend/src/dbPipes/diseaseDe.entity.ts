@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('DISEASE_DE')
 export class DiseaseDe {
   @PrimaryGeneratedColumn()
   id: number;
@@ -14,6 +14,6 @@ export class DiseaseDe {
   @Column()
   description: string;
 
-  @Column()
-  symptoms: Array<string>;
+  @Column( "varchar", {length: 512}) 
+  symptoms;
 }
