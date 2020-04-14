@@ -1,0 +1,1 @@
+//hier wird die Verbindung mit der MariaDb bei einer Anfrage erstellt

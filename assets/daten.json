@@ -1,0 +1,22 @@
+[
+    {
+        "disease_name": "Durchfall",
+        "disease_name_professional": "Dünschiss",
+        "description": "Das ist die Beschreibung von Durchfall.",
+        "symptoms": [
+            "Bauchschmerzen",
+            "Flüssiger Mist",
+            "Braune Unterhose"
+        ]    
+    },
+    {
+        "disease_name": "Durchfall",
+        "disease_name_professional": "Dünschiss",
+        "description": "Das ist die Beschreibung von Durchfall.",
+        "symptoms": [
+            "Bauchschmerzen",
+            "Flüssiger Mist",
+            "Braune Unterhose"
+        ]    
+    }
+]
