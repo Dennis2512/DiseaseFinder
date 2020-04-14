@@ -1,12 +1,5 @@
 {
   "projects": {
-<<<<<<< HEAD
-    "default": "diseasefinder"
+    "arthur": "diseasefinder"
   }
 }
-=======
-    "default": "diseasefinder",
-    "diseasefinderalias": "diseasefinder"
-  }
-}
->>>>>>> 0b27d0aeb6cc5d8beae8ff032d03b0496ca58190
