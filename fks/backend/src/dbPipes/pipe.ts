@@ -10,18 +10,15 @@ import { async } from "rxjs/internal/scheduler/async";
             .insert()
             .into(TestEntity)
             .values([
-                {
-                    disease_name: "Test_disease_Name1",
-                    disease_name_professional: "Test_disease_name_professional1",
-                    description: "Test_discription1",
-                    symptoms: "Test_Symptom1",//{ "Test_Symptom": "Symptom1" , "TestSymptom": "Symptom2"}
-                },
-                {
-                    disease_name: "Test_disease_Name2",
-                    disease_name_professional: "Test_disease_name_professional2",
-                    description: "Test_discription2",
-                    symptoms: "Test_Symptom2",
-                },
+                {disease_name: "Test_disease_Name1"},
+                {disease_name_professional: "Test_disease_name_professional1"},
+                {description: "Test_discription1"},
+                {symptoms: "Test_Symptom1"},//{ "Test_Symptom": "Symptom1" , "TestSymptom": "Symptom2"}
+                
+                {disease_name: "Test_disease_Name2"},
+                {disease_name_professional: "Test_disease_name_professional2"},
+                {description: "Test_discription2"},
+                {symptoms: "Test_Symptom2"},//{ "Test_Symptom": "Symptom1" , "TestSymptom": "Symptom2"}
             ])
             .execute();
     } catch (err) {
