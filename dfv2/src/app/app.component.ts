@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
     this.differ = this.differs.find({}).create();
    }
 
-   ngDoCheck() {
-    var button = document.getElementById( 'menu-toggle' );
+   public ngDoCheck(): void{
+    let button = document.getElementById( 'menu-toggle' );
   const change = this.differ.diff(this);
   if (change) {
     change.forEachChangedItem(item => {
