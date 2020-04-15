@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org ersetzt keinen Arzt! Wenden Sie sich bei medizinischen Notfällen an den Notdienst 112.";
       document.getElementById("search").innerHTML = "Suche";
     }else{
-      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency Services if necessary!";
+      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency services if necessary!";
       document.getElementById("search").innerHTML = "Search";
     }
   }
