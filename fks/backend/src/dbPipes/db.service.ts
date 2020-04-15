@@ -16,14 +16,14 @@ export class DbService {
         @InjectRepository(TestEntity)
         private testEntityRepository: Repository<TestEntity>,
 
-        @InjectRepository(DiseaseEn)
+        /*@InjectRepository(DiseaseEn)
         private diseaseEnRepository: Repository<DiseaseEn>,
 
         @InjectRepository(DiseaseDe)
         private diseaseDeRepository: Repository<DiseaseDe>,
 
         @InjectRepository(Praxis)
-        private praxisRepository: Repository<Praxis>,   
+        private praxisRepository: Repository<Praxis>,*/   
     ) { }
 
     //CRUD Functions for TestEntity
