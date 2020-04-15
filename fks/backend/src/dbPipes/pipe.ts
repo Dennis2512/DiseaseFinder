@@ -6,14 +6,12 @@ import { async } from "rxjs/internal/scheduler/async";
 import { Test } from "@nestjs/testing";
 //TEST
 
-
-/*
 (async () => {
     try {
         await getConnection()
             .createQueryBuilder()
             .insert()
-            .into('TEST_ENTITY')
+            .into(TestEntity)
             .values([
                 {disease_name: "Test_disease_Name1"},
                 {disease_name_professional: "Test_disease_name_professional1"},
@@ -26,12 +24,15 @@ import { Test } from "@nestjs/testing";
                 //{symptoms: "Test_Symptom2"},//{ "Test_Symptom": "Symptom1" , "TestSymptom": "Symptom2"}
             ])
             .execute();
-    } catch (err) {
-        console.log(err);
-
-    }
+        } catch (err) {
+            console.log(err);
+        }finally{
+            console.log("Daten wurden eingefügt");
+        }
 })()
 
+
+/*
 createConnection()
     .then(async conn =>{
         const sympt1 = await TestEntity
