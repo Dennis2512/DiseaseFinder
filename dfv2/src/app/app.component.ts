@@ -36,6 +36,19 @@ export class AppComponent implements OnInit {
 }
 
   ngOnInit(): void {
+    var lang = navigator.language;
+    if(lang !== "de"){
+      lang = "en";
+    }
+    console.log("language:"+lang);
+    if(lang==="de"){
+      document.getElementById("aboutUsSpan").innerHTML = "Über uns";
+      document.getElementById("contactSpan").innerHTML = "Impressum";
+    }else{
+      document.getElementById("aboutUsSpan").innerHTML = "About us";
+      document.getElementById("contactSpan").innerHTML = "Contact";;
+   
+    }
 }
 }
 export class IconSvgExample {

@@ -31,6 +31,17 @@ export class HomeComponent implements OnInit {
     this.user.getMessage('1').subscribe((res) => {
       console.log(res);
     });
+    var lang = navigator.language;
+    if(lang !== "de"){
+      lang = "en";
+    }
+    if(lang==="de"){
+      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org ersetzt keinen Arzt! Wenden Sie sich bei medizinischen Notfällen an den Notdienst 112.";
+      document.getElementById("search").innerHTML = "Suche";
+    }else{
+      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency Services if necessary!";
+      document.getElementById("search").innerHTML = "Search";
+    }
   }
 
   searchBarUp(){
