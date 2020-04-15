@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagesController } from './messages/messages.controller';
+import {DbModule} from './dbPipes/db.module'
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
@@ -10,7 +11,7 @@ import { Connection } from 'typeorm';
   imports: [
     //TypeOrmModule.forRoot({autoLoadEntities: true}),
     //DbModule
-    TypeOrmModule.forRoot(),
+    TypeOrmModule.forRoot(),DbModule
   ],
   controllers: [AppController, MessagesController],
   providers: [AppService],

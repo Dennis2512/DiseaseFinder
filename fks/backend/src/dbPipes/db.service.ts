@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, ShutdownSignal } from '@nestjs/common';
 import { Repository, In } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TestEntity } from './test.entity';
@@ -26,12 +26,18 @@ export class DbService {
         private praxisRepository: Repository<Praxis>,   
     ) { }
 
+    //CRUD Functions for TestEntity
     async  findAll(): Promise<TestEntity[]> {
         return await this.testRepository.find();
     }
 
     async  create(test: TestEntity): Promise<TestEntity> {
-        return await this.testRepository.save(test);
+        let createTest = new TestEntity;
+        createTest.disease_name = test.disease_name;
+        createTest.disease_name_professional = test.disease_name_professional;
+        createTest.description = test.description;
+        createTest.symptoms = test.symptoms;
+        return await this.testRepository.save(createTest);
     }
 
     async update(test: TestEntity): Promise<UpdateResult> {
@@ -40,5 +46,21 @@ export class DbService {
 
     async delete(id): Promise<DeleteResult> {
         return await this.testRepository.delete(id);
+    }
+
+    //CRUD Functions for DiseaseEn
+    //CRUD Functions for DiseaseDE
+    //CRUD Functions for Praxis
+
+    //TYPE-GUARDS for runtime type checking
+    static isTest(test: any): test is TestEntity {
+        return typeof test === 'object'
+            && typeof test.disease_name === 'string'
+            && typeof test.disease_name_professional === 'string'
+            && typeof test.description === 'string'
+            && typeof test.symptoms == 'string'
+    }
+    static isTestUpdater(test: any): boolean {
+        return test;
     }
 }
