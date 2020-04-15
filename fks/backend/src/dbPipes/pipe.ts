@@ -4,14 +4,23 @@ import { createConnection } from "typeorm";
 import { TestEntity } from "./test.entity";
 import { async } from "rxjs/internal/scheduler/async";
 import { Test } from "@nestjs/testing";
+import { DbModule } from "./db.module"
+import { create } from "domain";
 //TEST
-/*
+(async () => {
+    let data1  = new (TestEntity);
+    data1.disease_name = "testdata1";
+    data1.disease_name_professional = "testdata_professional1";
+    data1.description = "testdata_description";
+    data1.symptoms = "testdata_symptoms"
+    this.testEntityRepository.create(data1);
+})();
 (async () => {
     try {
         await getConnection()
             .createQueryBuilder()
             .insert()
-            .into('TEST_ENTITY')
+            .into(TestEntity)
             .values([
                 {disease_name: "Test_disease_Name1"},
                 {disease_name_professional: "Test_disease_name_professional1"},
@@ -24,12 +33,15 @@ import { Test } from "@nestjs/testing";
                 //{symptoms: "Test_Symptom2"},//{ "Test_Symptom": "Symptom1" , "TestSymptom": "Symptom2"}
             ])
             .execute();
-    } catch (err) {
-        console.log(err);
-
-    }
+        } catch (err) {
+            console.log(err);
+        }finally{
+            console.log("Daten wurden eingefügt");
+        }
 })()
 
+
+/*
 createConnection()
     .then(async conn =>{
         const sympt1 = await TestEntity
@@ -40,3 +52,4 @@ createConnection()
                      .save();
     })
     */
+

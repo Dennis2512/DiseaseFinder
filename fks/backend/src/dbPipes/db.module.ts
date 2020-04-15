@@ -9,21 +9,16 @@ import { Praxis } from './praxis.entity';
 
 import { UpdateResult, DeleteResult } from  'typeorm';
 
-@Module({
-  controllers: [DbController],
-  providers: [DbService]
-})
-export class DbModule {}
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([TestEntity]),
-    TypeOrmModule.forFeature([DiseaseDe]),
+    /*TypeOrmModule.forFeature([DiseaseDe]),
     TypeOrmModule.forFeature([DiseaseEn]),
-    TypeOrmModule.forFeature([Praxis]),
+    TypeOrmModule.forFeature([Praxis]),*/
   ],
   providers: [DbService],
   controllers: [DbController]
 })
-export class ContactsModule {}
+export class DbModule {}
 

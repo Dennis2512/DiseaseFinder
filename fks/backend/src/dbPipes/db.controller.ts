@@ -4,11 +4,13 @@ import { TestEntity } from './test.entity';
 import { DbService } from './db.service';
 
 import { Post,Put, Delete, Body, Param } from  '@nestjs/common';
+import { Db } from 'typeorm';
 
 
 @Controller('db')
 export class DbController {
     constructor(private DbService: DbService){}
+    //Test Entity 
     @Get()
     index(): Promise<TestEntity[]> {
         return this.DbService.findAll();
@@ -30,4 +32,8 @@ export class DbController {
     async delete(@Param('id') id): Promise<any> {
       return this.DbService.delete(id);
     }  
+
+    //DiseaseEn && DiseaseDe specific
+    
+    //Praxis specific
 }
