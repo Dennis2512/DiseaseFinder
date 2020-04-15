@@ -14,7 +14,7 @@ import { Test } from '@nestjs/testing';
 export class DbService {
     constructor(
         @InjectRepository(TestEntity)
-        private testRepository: Repository<TestEntity>,
+        private testEntityRepository: Repository<TestEntity>,
 
         @InjectRepository(DiseaseEn)
         private diseaseEnRepository: Repository<DiseaseEn>,
@@ -28,7 +28,7 @@ export class DbService {
 
     //CRUD Functions for TestEntity
     async  findAll(): Promise<TestEntity[]> {
-        return await this.testRepository.find();
+        return await this.testEntityRepository.find();
     }
 
     async  create(test: TestEntity): Promise<TestEntity> {
@@ -37,15 +37,15 @@ export class DbService {
         createTest.disease_name_professional = test.disease_name_professional;
         createTest.description = test.description;
         createTest.symptoms = test.symptoms;
-        return await this.testRepository.save(createTest);
+        return await this.testEntityRepository.save(createTest);
     }
 
     async update(test: TestEntity): Promise<UpdateResult> {
-        return await this.testRepository.update(test.id, test);
+        return await this.testEntityRepository.update(test.id, test);
     }
 
     async delete(id): Promise<DeleteResult> {
-        return await this.testRepository.delete(id);
+        return await this.testEntityRepository.delete(id);
     }
 
     //CRUD Functions for DiseaseEn
@@ -53,14 +53,14 @@ export class DbService {
     //CRUD Functions for Praxis
 
     //TYPE-GUARDS for runtime type checking
-    static isTest(test: any): test is TestEntity {
-        return typeof test === 'object'
-            && typeof test.disease_name === 'string'
-            && typeof test.disease_name_professional === 'string'
-            && typeof test.description === 'string'
-            && typeof test.symptoms == 'string'
+    static isTest(testGuard: any): testGuard is TestEntity {
+        return typeof testGuard === 'object'
+            && typeof testGuard.disease_name === 'string'
+            && typeof testGuard.disease_name_professional === 'string'
+            && typeof testGuard.description === 'string'
+            && typeof testGuard.symptoms == 'string'
     }
-    static isTestUpdater(test: any): boolean {
-        return test;
+    static isTestUpdater(testGuard: any): boolean {
+        return testGuard;
     }
 }
