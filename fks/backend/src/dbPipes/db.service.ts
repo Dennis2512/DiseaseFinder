@@ -9,6 +9,8 @@ import { Praxis } from './praxis.entity';
 import { UpdateResult, DeleteResult } from  'typeorm';
 import { Test } from '@nestjs/testing';
 
+const data1 = `INSERT INTO TEST_ENTITY(disease_name, disease_name_professional, description, symptoms) VALUES ('testName', 'testName_professional', 'testDescription', 'testSymptoms')`;
+
 
 @Injectable()
 export class DbService {
