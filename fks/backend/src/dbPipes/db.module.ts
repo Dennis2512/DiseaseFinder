@@ -12,6 +12,7 @@ import { UpdateResult, DeleteResult } from  'typeorm';
 
 @Module({
   imports: [
+    //TypeOrmModule.forFeature({autoLoadEntities: true}),
     TypeOrmModule.forFeature([TestEntity]),
     /*TypeOrmModule.forFeature([DiseaseDe]),
     TypeOrmModule.forFeature([DiseaseEn]),
