@@ -6,7 +6,12 @@ import { async } from "rxjs/internal/scheduler/async";
 import { Test } from "@nestjs/testing";
 import { DbModule } from "./db.module"
 import { create } from "domain";
+import {DbService} from "./db.service"
 //TEST
+
+//const statementInsertTableLedger = `INSERT INTO ledger (id, date, amount, sender, receiver) VALUES ('p2pidp2p', 'p2pdatep2p', 'p2pamountp2p', 'p2psenderp2p','p2preceiverp2p')`
+const data1 = `INSERT INTO TEST_ENTITY(disease_name, disease_name_professional, description, symptoms) VALUES ('testName', 'testName_professional', 'testDescription', 'testSymptoms')`;
+
 (async () => {
     let data1  = new (TestEntity);
     data1.disease_name = "testdata1";
