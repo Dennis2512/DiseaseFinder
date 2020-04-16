@@ -38,9 +38,11 @@ export class HomeComponent implements OnInit {
     if(lang==="de"){
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org ersetzt keinen Arzt! Wenden Sie sich bei medizinischen Notfällen an den Notdienst 112.";
       document.getElementById("search").innerHTML = "Suche";
+      document.getElementById("searchBarSpan").innerHTML = "<input type=\"text\" #symptomInput class=\"form-control\" placeholder=\"Symptom(e)\" aria-label=\"inputSymphthom\" aria-describedby=\"basic-addon2\">";
     }else{
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency services if necessary!";
       document.getElementById("search").innerHTML = "Search";
+      document.getElementById("searchBarSpan").innerHTML = "<input type=\"text\" #symptomInput class=\"form-control\" placeholder=\"Symptom(s)\" aria-label=\"inputSymphthom\" aria-describedby=\"basic-addon2\">";
     }
   }
 
