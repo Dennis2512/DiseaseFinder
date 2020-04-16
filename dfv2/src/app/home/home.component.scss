@@ -16,3 +16,32 @@
 .searchBarSpanStyle{
     width: 93%;
 }
+
+@media only screen and (max-width: 600px){
+    .searchBarSpanStyle{
+        width: 79%;
+    }
+}
+
+@media only screen and (max-width: 1201px){
+    .searchBarSpanStyle{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .searchBarSpanStyle{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .searchBarSpanStyle{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .searchBarSpanStyle{
+        width: 70%;
+    }
+}
