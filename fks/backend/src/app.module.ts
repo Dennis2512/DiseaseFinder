@@ -7,6 +7,7 @@ import {DbModule} from './dbPipes/db.module'
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 
+
 @Module({
   imports: [
     //TypeOrmModule.forRoot({autoLoadEntities: true}),
@@ -20,3 +21,17 @@ import { Connection } from 'typeorm';
 export class AppModule {
   constructor(private connection: Connection) {}
 }
+
+
+//run local
+/*
+@Module({
+  imports: [],
+  controllers: [AppController, MessagesController],
+  providers: [AppService],
+
+})
+export class AppModule {
+  
+}
+*/

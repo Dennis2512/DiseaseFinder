@@ -13,7 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const user_dto_1 = require("./user.dto");
+const client_dto_1 = require("./client.dto");
 let MessagesController = class MessagesController {
     getSymptoms() {
         return {
@@ -54,7 +54,7 @@ __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [user_dto_1.UserDto]),
+    __metadata("design:paramtypes", [client_dto_1.ClientDto]),
     __metadata("design:returntype", void 0)
 ], MessagesController.prototype, "sendSymptoms", null);
 MessagesController = __decorate([

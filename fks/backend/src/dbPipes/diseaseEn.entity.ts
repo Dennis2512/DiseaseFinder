@@ -1,3 +1,4 @@
+
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('DISEASE_EN')
@@ -17,3 +18,4 @@ export class DiseaseEn {
     @Column( "varchar", {length: 512}) 
     symptoms;
   }
+  

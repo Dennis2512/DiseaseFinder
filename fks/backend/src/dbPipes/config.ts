@@ -4,7 +4,8 @@ import * as path from 'path'
 //import * as fs from 'fs-sync'
 
 
-export const postgresConfig: TypeOrmModuleOptions = {
+
+export const mariadbConfig: TypeOrmModuleOptions = {
     type: 'mariadb',
     host: "35.234.113.147",
     port: 3306,
@@ -15,3 +16,4 @@ export const postgresConfig: TypeOrmModuleOptions = {
     synchronize: true,
     autoLoadEntities: true,
 }
+

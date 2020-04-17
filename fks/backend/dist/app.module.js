@@ -13,8 +13,7 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const messages_controller_1 = require("./messages/messages.controller");
-const typeorm_1 = require("@nestjs/typeorm");
-const typeorm_2 = require("typeorm");
+const typeorm_1 = require("typeorm");
 let AppModule = class AppModule {
     constructor(connection) {
         this.connection = connection;
@@ -22,13 +21,11 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [
-            typeorm_1.TypeOrmModule.forRoot(),
-        ],
+        imports: [],
         controllers: [app_controller_1.AppController, messages_controller_1.MessagesController],
         providers: [app_service_1.AppService],
     }),
-    __metadata("design:paramtypes", [typeorm_2.Connection])
+    __metadata("design:paramtypes", [typeorm_1.Connection])
 ], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

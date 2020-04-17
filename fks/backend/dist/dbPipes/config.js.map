@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sourceRoot":"","sources":["../../src/dbPipes/config.ts"],"names":[],"mappings":";;AAAA,+CAAyC;AAM5B,QAAA,aAAa,GAAyB;IAC/C,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,gBAAgB;IACtB,IAAI,EAAE,IAAI;IACV,QAAQ,EAAE,MAAM;IAChB,QAAQ,EAAE,iBAAiB;IAC3B,QAAQ,EAAE,MAAM;IAChB,QAAQ,EAAE,CAAC,wBAAU,CAAC;IACtB,WAAW,EAAE,IAAI;IACjB,gBAAgB,EAAE,IAAI;CACzB,CAAA"}

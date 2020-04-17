@@ -129,6 +129,10 @@
         "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
+      "../ormconfig.ts": {
+        "version": "9099aceec0542ada1b21839f0ea01afe68b67bc5b03a5492d4279bda580a158b",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
       "../node_modules/reflect-metadata/index.d.ts": {
         "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
@@ -1109,13 +1113,13 @@
         "version": "1410884051c9eb9be18a544cb5c246dfab7936d27c3a28c7af2688b864d742bf",
         "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32"
       },
-      "../src/messages/user.dto.ts": {
-        "version": "ef59ec6d379d1b58947c6c58535dece8c2d82a4fe07e626855e125f49c2c7991",
-        "signature": "f1b2b7029df13e9911de416f435ad0b3282a24600d4b818cc04e444e88cfc59b"
+      "../src/messages/client.dto.ts": {
+        "version": "c8b571983f07317403c21dc76f3bc3ac8d935e8240d2713c099127c5bc50a241",
+        "signature": "da560a9ed9cbe802170f2c4d1eea6eb920133526a8f6f32c113896890b28b1d7"
       },
       "../src/messages/messages.controller.ts": {
-        "version": "ce1195da3b4ee6e8d80b29f84f8b207eb03b6ca5fc37e307fe90c6ac8b7755b4",
-        "signature": "0d1063276985844f5909895dd79c27c95a61aa0480e5dbc7df558c9ebf1149c8"
+        "version": "987d2a2ba59bfd32d1fc851b091e16d9ec6aa08ce1e2fe56f3d98765718e77db",
+        "signature": "5ccdc7782852ccf83b4c408901f6819e00417acfbe8faa1457ba63e53c2dbbdc"
       },
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": {
         "version": "222ebf19b1260582fd2023a65c5b7da77f730021f05afb9c4ead4b0b339a8c98",
@@ -2150,8 +2154,8 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/app.module.ts": {
-        "version": "7364f7d99ac427866a6b5ec87b401570fd33914df998b9b5750f5b11ade5c0d7",
-        "signature": "952ad08759f8f7b2fa9451d437031294a9b00ccddc43983092fea9b3f67b0199"
+        "version": "fcd9dd9835a883d47c547b10acadb41c2ef26103bdc6fdd2923c49a5f4739e77",
+        "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
         "version": "71cc7da1ef9d96f44a214a43017535538b47988d4bc9dedbf7592d2f9fe10da9",
@@ -2298,7 +2302,7 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d"
       },
       "../src/main.ts": {
-        "version": "1e58c52bb490a90e3a9bc3e44e553fe1b6c534d13778a0dd891964f14584e1de",
+        "version": "d22c57ae83de69b490a43ae9510bb2d93d9c06334d76c56b9d83cd16a76aeea8",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/apihelper/docapi.ts": {
@@ -2309,17 +2313,41 @@
         "version": "f58f763a0fde017d9560a11a0df21bdacdcacae1652a983f45ec1c7ef71db201",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "../src/dbpipes/connect.ts": {
-        "version": "4c08987cc24125d72a7913fc20a4d449450ea5c43d267b170b42ce8a682d36dc",
+      "../src/dbpipes/test.entity.ts": {
+        "version": "45145fc3a741711b2fa7ffc85587cbf99bc8e8f83d35729836deff2c34900c81",
+        "signature": "8fadeaa71b3d716bf2ba8a0febb657898069666d09cbf05a695fddb06866bd68"
+      },
+      "../src/dbpipes/config.ts": {
+        "version": "7de1f6547168f0f5e75ef50a8b2e3f5d98c3bff28f0b205289f972c8b828795d",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "../src/dbpipes/db.controller.ts": {
+        "version": "9607a4ea83fc8cff2d47734d2a44911297b1d8524de0a511443073a6bbc287d0",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "../src/dbpipes/db.module.ts": {
+        "version": "0f80aa0fd4e2465cc4e5d05748cb7c9f03b2a1d6706d32c91e7285bced56299f",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "../src/dbpipes/db.service.ts": {
+        "version": "a36cb3244b67c911cd8e960b814ade7ab471e44075959b21dd85eca4b380ca46",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "../src/dbpipes/diseasede.entity.ts": {
+        "version": "95dc42837a45e0d014562b1771f6afa8b914ca465666046436af1c75a3be692d",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "../src/dbpipes/diseaseen.entity.ts": {
+        "version": "b66ef760209a940bbe7514a0baf1262ec6804428ad31969542d66394c1622233",
+        "signature": "334ece6f4b3ec2b388390166d1aa4f473048fffa18ca6442b2997d11aed1167e"
       },
       "../src/dbpipes/pipe.ts": {
-        "version": "972c6c2095e06d178497d8997cb2415f8ef1579a07127c806c948a37a6d49dca",
+        "version": "c83f21f374b287491137fcf161f32a1a4c1eb9f75a6b9389fce68abe3e773a09",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "../src/dbpipes/user.entity.ts": {
-        "version": "3d8dfd18b1317ab8da24223fdafe24fd04457bccae509cdc667338373469f12f",
-        "signature": "9202915f78c97345472b73dbbe04d8da00b286b4d1034dd34186437bc547858c"
+      "../src/dbpipes/praxis.entity.ts": {
+        "version": "738c5796d7590a08793c3d21501dc26c0ba08c40e2669e9ac9061926061fa425",
+        "signature": "ac1818719389999662f6f01db3dd5bfc3674ad3b471e0cad9ce7a30d2f97d233"
       },
       "../src/universal/universal.ts": {
         "version": "0eac017e28e94e4ffb9aae20ebe9ee78b9a8b8f841dba1147cd58b59739ce160",
@@ -2699,6 +2727,12 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/typescript/lib/lib.es2017.full.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../ormconfig.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -4704,7 +4738,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/messages/user.dto.ts": [
+      "../src/messages/client.dto.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -4712,7 +4746,7 @@
       ],
       "../src/messages/messages.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/messages/user.dto.ts",
+        "../src/messages/client.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7359,7 +7393,48 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/dbpipes/connect.ts": [
+      "../src/dbpipes/test.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/config.ts": [
+        "../src/dbpipes/test.entity.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.controller.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.module.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.service.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/diseasede.entity.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/diseaseen.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7371,7 +7446,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/dbpipes/user.entity.ts": [
+      "../src/dbpipes/praxis.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9880,7 +9955,7 @@
         "../src/app.service.ts"
       ],
       "../src/messages/messages.controller.ts": [
-        "../src/messages/user.dto.ts"
+        "../src/messages/client.dto.ts"
       ],
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -12172,9 +12247,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/app.module.ts": [
-        "../node_modules/typeorm/index.d.ts"
-      ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
@@ -12492,6 +12564,9 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/test.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
       ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",

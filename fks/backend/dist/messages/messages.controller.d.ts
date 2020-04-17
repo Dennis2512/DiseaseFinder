@@ -1,4 +1,4 @@
-import { UserDto } from './user.dto';
+import { ClientDto } from './client.dto';
 export declare class MessagesController {
     getSymptoms(): {
         message: string;
@@ -6,5 +6,5 @@ export declare class MessagesController {
     getMessage(id: any): {
         message: string;
     };
-    sendSymptoms(user: UserDto): UserDto;
+    sendSymptoms(user: ClientDto): ClientDto;
 }
