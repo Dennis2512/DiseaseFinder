@@ -18,7 +18,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  placeholder="Symptom"
 //Data variables
   searchUp: boolean = false;
   symptomInput: string = null;
@@ -38,9 +38,11 @@ export class HomeComponent implements OnInit {
     if(lang==="de"){
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org ersetzt keinen Arzt! Wenden Sie sich bei medizinischen Notfällen an den Notdienst 112.";
       document.getElementById("search").innerHTML = "Suche";
+      this.placeholder = "Symptom(e)";
     }else{
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency services if necessary!";
       document.getElementById("search").innerHTML = "Search";
+      this.placeholder = "Symptom(s)";
     }
   }
 
