@@ -130,7 +130,7 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "../ormconfig.ts": {
-        "version": "9099aceec0542ada1b21839f0ea01afe68b67bc5b03a5492d4279bda580a158b",
+        "version": "c43176d161b8b5b89d9215e618989736304ef8a27a264415313d8c653a2191ed",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "../node_modules/reflect-metadata/index.d.ts": {
@@ -1118,7 +1118,7 @@
         "signature": "da560a9ed9cbe802170f2c4d1eea6eb920133526a8f6f32c113896890b28b1d7"
       },
       "../src/messages/messages.controller.ts": {
-        "version": "987d2a2ba59bfd32d1fc851b091e16d9ec6aa08ce1e2fe56f3d98765718e77db",
+        "version": "2675bc1a23a94b8243b7e1d512487286665e5e36fdb9e37a4ad524dd1b632b75",
         "signature": "5ccdc7782852ccf83b4c408901f6819e00417acfbe8faa1457ba63e53c2dbbdc"
       },
       "../node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": {
@@ -2121,6 +2121,10 @@
         "version": "26d590f7fc94dc8bd476aab67a6047b39a72b0dcbdb7c5ce1dbd369762d63e4f",
         "signature": "26d590f7fc94dc8bd476aab67a6047b39a72b0dcbdb7c5ce1dbd369762d63e4f"
       },
+      "../src/dbpipes/test.entity.ts": {
+        "version": "45145fc3a741711b2fa7ffc85587cbf99bc8e8f83d35729836deff2c34900c81",
+        "signature": "8fadeaa71b3d716bf2ba8a0febb657898069666d09cbf05a695fddb06866bd68"
+      },
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": {
         "version": "d7c96b1fc407d8fb5e973d594bd93771677bcacc0298f00dae5e642b0a30ad27",
         "signature": "d7c96b1fc407d8fb5e973d594bd93771677bcacc0298f00dae5e642b0a30ad27"
@@ -2153,9 +2157,29 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
-      "../src/app.module.ts": {
-        "version": "fcd9dd9835a883d47c547b10acadb41c2ef26103bdc6fdd2923c49a5f4739e77",
-        "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
+      "../src/dbpipes/diseaseen.entity.ts": {
+        "version": "b66ef760209a940bbe7514a0baf1262ec6804428ad31969542d66394c1622233",
+        "signature": "334ece6f4b3ec2b388390166d1aa4f473048fffa18ca6442b2997d11aed1167e"
+      },
+      "../src/dbpipes/diseasede.entity.ts": {
+        "version": "30ebe4fc66f1c61e2f3f6caabe427366d47cff4aeb68fcff1fe8c4ba00aba38b",
+        "signature": "d7980709664fdc416a2b9bc93d145f25959830dff283ba44c9320a2baf5084a5"
+      },
+      "../src/dbpipes/praxis.entity.ts": {
+        "version": "738c5796d7590a08793c3d21501dc26c0ba08c40e2669e9ac9061926061fa425",
+        "signature": "ac1818719389999662f6f01db3dd5bfc3674ad3b471e0cad9ce7a30d2f97d233"
+      },
+      "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts": {
+        "version": "ca248f650c19abc031e2aaafa41fceb524378b1a2249905b44d1c8e4148fcb52",
+        "signature": "ca248f650c19abc031e2aaafa41fceb524378b1a2249905b44d1c8e4148fcb52"
+      },
+      "../node_modules/@nestjs/core/metadata-scanner.d.ts": {
+        "version": "9c08c74e1560befc7fc784be9cd20ec036f7387ad0d55dbb0d5164b3a67f6ab0",
+        "signature": "9c08c74e1560befc7fc784be9cd20ec036f7387ad0d55dbb0d5164b3a67f6ab0"
+      },
+      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": {
+        "version": "e3d221660c0b79a9a3ba1111b3dfbb1136c0b52d7609b0054d3ce09ce711a3e6",
+        "signature": "e3d221660c0b79a9a3ba1111b3dfbb1136c0b52d7609b0054d3ce09ce711a3e6"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
         "version": "71cc7da1ef9d96f44a214a43017535538b47988d4bc9dedbf7592d2f9fe10da9",
@@ -2241,10 +2265,6 @@
         "version": "e99e3ad9035927f61b1d6b54c51fca01e46bdcaf861fd9484086d871e76d0aef",
         "signature": "e99e3ad9035927f61b1d6b54c51fca01e46bdcaf861fd9484086d871e76d0aef"
       },
-      "../node_modules/@nestjs/core/metadata-scanner.d.ts": {
-        "version": "9c08c74e1560befc7fc784be9cd20ec036f7387ad0d55dbb0d5164b3a67f6ab0",
-        "signature": "9c08c74e1560befc7fc784be9cd20ec036f7387ad0d55dbb0d5164b3a67f6ab0"
-      },
       "../node_modules/@nestjs/core/middleware/routes-mapper.d.ts": {
         "version": "5175a0f207a73df7426acc2bdc854b0c4bfab7434742f873816f0fc71f4fa2f5",
         "signature": "5175a0f207a73df7426acc2bdc854b0c4bfab7434742f873816f0fc71f4fa2f5"
@@ -2268,10 +2288,6 @@
       "../node_modules/@nestjs/core/nest-application.d.ts": {
         "version": "5288688d801a30401b794c3af649a310f0c29c6a21445b93e1bfd029849bf49f",
         "signature": "5288688d801a30401b794c3af649a310f0c29c6a21445b93e1bfd029849bf49f"
-      },
-      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": {
-        "version": "e3d221660c0b79a9a3ba1111b3dfbb1136c0b52d7609b0054d3ce09ce711a3e6",
-        "signature": "e3d221660c0b79a9a3ba1111b3dfbb1136c0b52d7609b0054d3ce09ce711a3e6"
       },
       "../node_modules/@nestjs/core/nest-factory.d.ts": {
         "version": "23793cb60372f28d6d20fbb2effb8a9673ccd1fcdf7d253f4c2787de197977d3",
@@ -2301,8 +2317,48 @@
         "version": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d"
       },
+      "../node_modules/@nestjs/testing/testing-module.d.ts": {
+        "version": "930e8338212d259acfb8cc06097f8d57b0d15190893bca2cd6f24fbaf428b758",
+        "signature": "930e8338212d259acfb8cc06097f8d57b0d15190893bca2cd6f24fbaf428b758"
+      },
+      "../node_modules/@nestjs/testing/testing-module.builder.d.ts": {
+        "version": "ba8cf606aee66bd27748f6b51776ebc6117f8abdaee40052e890e697baff8e0b",
+        "signature": "ba8cf606aee66bd27748f6b51776ebc6117f8abdaee40052e890e697baff8e0b"
+      },
+      "../node_modules/@nestjs/testing/interfaces/override-by.interface.d.ts": {
+        "version": "9388b0ffb5ab94e23e0165a96985091a133e3632e5f92fd72b14df7d73b3804d",
+        "signature": "9388b0ffb5ab94e23e0165a96985091a133e3632e5f92fd72b14df7d73b3804d"
+      },
+      "../node_modules/@nestjs/testing/interfaces/index.d.ts": {
+        "version": "a397d00d0454ddb1cae255c19bde344f78b8b93512cff09b98b7e148d889b6e6",
+        "signature": "a397d00d0454ddb1cae255c19bde344f78b8b93512cff09b98b7e148d889b6e6"
+      },
+      "../node_modules/@nestjs/testing/test.d.ts": {
+        "version": "927c6cf84c59b3ca7fdb6d3cbc3aa986193337b6a9758994575106f6073ee737",
+        "signature": "927c6cf84c59b3ca7fdb6d3cbc3aa986193337b6a9758994575106f6073ee737"
+      },
+      "../node_modules/@nestjs/testing/index.d.ts": {
+        "version": "0a33b8bff876368beef794f5f08e8221103efa394f9e0e27e19f557a8cdaa0a0",
+        "signature": "0a33b8bff876368beef794f5f08e8221103efa394f9e0e27e19f557a8cdaa0a0"
+      },
+      "../src/dbpipes/db.service.ts": {
+        "version": "ecb338a4329bf7b6384f91c95baa91c00b66f9ba7c29de0cf8dc4b106e778226",
+        "signature": "0b012567d1f01b0978f5de3460737dcd55fcd9af789e224a7076a270473269f4"
+      },
+      "../src/dbpipes/db.controller.ts": {
+        "version": "51cdec8a83a4c8566dc398b47879443c4819db80b63f60291e66f9e9d2889a9d",
+        "signature": "4e30490e68c3cc5007e09fb6d6d05862652b7a78b07535f71f01a5aec0378d72"
+      },
+      "../src/dbpipes/db.module.ts": {
+        "version": "f4b2000b5dd802d5fc32ed77bf769961554652ce8d90209245c945fe0e9a21b5",
+        "signature": "81c7391f4941f7fa7620f020760ffeb4cd99fbe2c4a198aaa953008a69c7403b"
+      },
+      "../src/app.module.ts": {
+        "version": "0acb98df8231cff2749f55605e30112e1f00995d9077c77f063a9e01abc1eae1",
+        "signature": "952ad08759f8f7b2fa9451d437031294a9b00ccddc43983092fea9b3f67b0199"
+      },
       "../src/main.ts": {
-        "version": "d22c57ae83de69b490a43ae9510bb2d93d9c06334d76c56b9d83cd16a76aeea8",
+        "version": "5a4b1741132ff6c9fcee334e62631316bf6d9f5b23a5269893c3402fbe57b83b",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/apihelper/docapi.ts": {
@@ -2313,41 +2369,13 @@
         "version": "f58f763a0fde017d9560a11a0df21bdacdcacae1652a983f45ec1c7ef71db201",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "../src/dbpipes/test.entity.ts": {
-        "version": "45145fc3a741711b2fa7ffc85587cbf99bc8e8f83d35729836deff2c34900c81",
-        "signature": "8fadeaa71b3d716bf2ba8a0febb657898069666d09cbf05a695fddb06866bd68"
-      },
       "../src/dbpipes/config.ts": {
-        "version": "7de1f6547168f0f5e75ef50a8b2e3f5d98c3bff28f0b205289f972c8b828795d",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "../src/dbpipes/db.controller.ts": {
-        "version": "9607a4ea83fc8cff2d47734d2a44911297b1d8524de0a511443073a6bbc287d0",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "../src/dbpipes/db.module.ts": {
-        "version": "0f80aa0fd4e2465cc4e5d05748cb7c9f03b2a1d6706d32c91e7285bced56299f",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "../src/dbpipes/db.service.ts": {
-        "version": "a36cb3244b67c911cd8e960b814ade7ab471e44075959b21dd85eca4b380ca46",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "../src/dbpipes/diseasede.entity.ts": {
-        "version": "95dc42837a45e0d014562b1771f6afa8b914ca465666046436af1c75a3be692d",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "../src/dbpipes/diseaseen.entity.ts": {
-        "version": "b66ef760209a940bbe7514a0baf1262ec6804428ad31969542d66394c1622233",
-        "signature": "334ece6f4b3ec2b388390166d1aa4f473048fffa18ca6442b2997d11aed1167e"
+        "version": "0f520e82a5afb1d62ee1efb02c4361a3f29956a18b30926144d5911bcd5e803a",
+        "signature": "298d0db6b8adb8ec37f03c6e0fab7b88cb12d1cded0a197167e040f088151369"
       },
       "../src/dbpipes/pipe.ts": {
         "version": "c83f21f374b287491137fcf161f32a1a4c1eb9f75a6b9389fce68abe3e773a09",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "../src/dbpipes/praxis.entity.ts": {
-        "version": "738c5796d7590a08793c3d21501dc26c0ba08c40e2669e9ac9061926061fa425",
-        "signature": "ac1818719389999662f6f01db3dd5bfc3674ad3b471e0cad9ce7a30d2f97d233"
       },
       "../src/universal/universal.ts": {
         "version": "0eac017e28e94e4ffb9aae20ebe9ee78b9a8b8f841dba1147cd58b59739ce160",
@@ -6977,6 +7005,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/dbpipes/test.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -7042,13 +7077,42 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/app.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/app.controller.ts",
-        "../src/app.service.ts",
-        "../src/messages/messages.controller.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
+      "../src/dbpipes/diseaseen.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/diseasede.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/praxis.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/core/metadata-scanner.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7228,13 +7292,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@nestjs/core/metadata-scanner.d.ts": [
-        "../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@nestjs/core/middleware/routes-mapper.d.ts": [
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/core/injector/container.d.ts",
@@ -7293,13 +7350,6 @@
         "../node_modules/@nestjs/core/application-config.d.ts",
         "../node_modules/@nestjs/core/injector/container.d.ts",
         "../node_modules/@nestjs/core/nest-application-context.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": [
-        "../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7372,6 +7422,117 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../node_modules/@nestjs/testing/testing-module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@nestjs/core/application-config.d.ts",
+        "../node_modules/@nestjs/core/injector/container.d.ts",
+        "../node_modules/@nestjs/core/injector/module.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/testing-module.builder.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/core/metadata-scanner.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/index.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/override-by.interface.d.ts": [
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/override-by.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/test.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/index.d.ts": [
+        "../node_modules/@nestjs/testing/interfaces/index.d.ts",
+        "../node_modules/@nestjs/testing/test.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/dbpipes/test.entity.ts",
+        "../src/dbpipes/diseaseen.entity.ts",
+        "../src/dbpipes/diseasede.entity.ts",
+        "../src/dbpipes/praxis.entity.ts",
+        "../node_modules/@nestjs/testing/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/dbpipes/test.entity.ts",
+        "../src/dbpipes/db.service.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/db.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/dbpipes/db.controller.ts",
+        "../src/dbpipes/db.service.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/dbpipes/test.entity.ts",
+        "../src/dbpipes/diseasede.entity.ts",
+        "../src/dbpipes/diseaseen.entity.ts",
+        "../src/dbpipes/praxis.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/app.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/app.controller.ts",
+        "../src/app.service.ts",
+        "../src/messages/messages.controller.ts",
+        "../src/dbpipes/db.module.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts",
@@ -7393,13 +7554,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/dbpipes/test.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../src/dbpipes/config.ts": [
         "../src/dbpipes/test.entity.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
@@ -7409,45 +7563,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/dbpipes/db.controller.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/db.module.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/db.service.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/diseasede.entity.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/diseaseen.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../src/dbpipes/pipe.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/praxis.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12182,6 +12298,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/dbpipes/test.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -12242,6 +12361,20 @@
       ],
       "../node_modules/@nestjs/typeorm/index.d.ts": [
         "../node_modules/@nestjs/typeorm/dist/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/core/metadata-scanner.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12421,13 +12554,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@nestjs/core/metadata-scanner.d.ts": [
-        "../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@nestjs/core/middleware/routes-mapper.d.ts": [
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/core/injector/container.d.ts",
@@ -12486,13 +12612,6 @@
         "../node_modules/@nestjs/core/application-config.d.ts",
         "../node_modules/@nestjs/core/injector/container.d.ts",
         "../node_modules/@nestjs/core/nest-application-context.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts": [
-        "../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -12564,9 +12683,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/dbpipes/test.entity.ts": [
-        "../node_modules/typeorm/index.d.ts"
       ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -12880,6 +12996,85 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/app.module.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/dbpipes/db.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/dbpipes/test.entity.ts"
+      ],
+      "../src/dbpipes/db.controller.ts": [
+        "../src/dbpipes/db.service.ts",
+        "../src/dbpipes/test.entity.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/override-by.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/index.d.ts": [
+        "../node_modules/@nestjs/testing/interfaces/index.d.ts",
+        "../node_modules/@nestjs/testing/test.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/testing-module.builder.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/core/metadata-scanner.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/index.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/test.d.ts": [
+        "../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/interfaces/override-by.interface.d.ts": [
+        "../node_modules/@nestjs/testing/testing-module.builder.d.ts",
+        "../node_modules/@nestjs/testing/interfaces/override-by-factory-options.interface.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@nestjs/testing/testing-module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/microservices/nest-microservice-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@nestjs/core/application-config.d.ts",
+        "../node_modules/@nestjs/core/injector/container.d.ts",
+        "../node_modules/@nestjs/core/injector/module.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/dbpipes/config.ts": [
+        "../node_modules/@nestjs/typeorm/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": []

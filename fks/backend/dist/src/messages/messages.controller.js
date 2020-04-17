@@ -15,14 +15,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const client_dto_1 = require("./client.dto");
 var sampleData = '{ "Diseases" : [' +
-    '{ "disease_name":"diseas1" , "disease_name_professional":"diseas1_professional1", "description":"diseas1_description", "symptoms":"diseas1_symptoms" },' +
-    '{ "disease_name":"diseas2" , "disease_name_professional":"diseas2_professional1", "description":"diseas2_description", "symptoms":"diseas2_symptoms" },' +
-    '{ "disease_name":"diseas3" , "disease_name_professional":"diseas3_professional1", "description":"diseas3_description", "symptoms":"diseas3_symptoms" }]}';
+    '{ "disease_name":"disease1" , "disease_name_professional":"disease1_professional1", "description":"disease1_description", "symptoms":"disease1_symptoms" },' +
+    '{ "disease_name":"disease2" , "disease_name_professional":"disease2_professional1", "description":"disease2_description", "symptoms":"disease2_symptoms" },' +
+    '{ "disease_name":"disease3" , "disease_name_professional":"disease3_professional1", "description":"disease3_description", "symptoms":"disease3_symptoms" }]}';
 function minCreator1() {
     console.log(sampleData);
     return sampleData;
 }
 ;
+function minFindDisease(userinput) {
+    return;
+}
 let MessagesController = class MessagesController {
     getSymptoms() {
         return {

@@ -1,1 +1,21 @@
+{
+    "type";
+    "mariadb",
+        "host";
+    "35.234.113.147",
+        "port";
+    3306,
+        "username";
+    "root",
+        "password";
+    "diseasefinderdb",
+        "database";
+    "test",
+        "entities";
+    ["dist/**//*.entity{.ts,.js}"],
+        "synchronize";
+    true,
+        "logging";
+    true;
+}
 //# sourceMappingURL=ormconfig.js.map
