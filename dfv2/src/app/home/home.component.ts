@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
       document.getElementById("search").innerHTML = "Suche";
       this.placeholder = "Symptom(e)";
     }else{
-      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emeergency services if necessary!";
+      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emergency services if necessary!";
       document.getElementById("search").innerHTML = "Search";
       this.placeholder = "Symptom(s)";
     }
@@ -65,9 +65,9 @@ export class HomeComponent implements OnInit {
     }
 
     this.user.sendSymptoms(symptomSend).subscribe((res) => {
-      console.log(res);
       this.symptoms = res;
       console.log(this.symptoms);
+      //console.log(this.symptoms.disease_name);
     });
   }
 
