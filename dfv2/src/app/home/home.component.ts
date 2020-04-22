@@ -24,10 +24,13 @@ export class HomeComponent implements OnInit {
   symptomInput: string = null;
 
   constructor(private user: UserService) { }
-
+  symptoms: Object;
 
 //Functions
   ngOnInit(): void {
+    
+
+
     this.user.getMessage('1').subscribe((res) => {
       console.log(res);
     });
@@ -63,7 +66,8 @@ export class HomeComponent implements OnInit {
 
     this.user.sendSymptoms(symptomSend).subscribe((res) => {
       console.log(res);
-      
+      this.symptoms = res;
+      console.log(this.symptoms);
     });
   }
 

@@ -10,4 +10,7 @@
       <span id="disclaimerSpan"></span>
     </small>
 </div>
+<ul *ngIf="symptoms" >
+  <li *ngFor="let symptomDF of symptoms"></li>
+</ul>
 
