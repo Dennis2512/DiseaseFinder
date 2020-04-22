@@ -1,0 +1,20 @@
+[
+    {
+    "disease_name": "Absence-Anfall",
+    "disease_name_professional": "Absence-Epilepsie",
+    "description": "Absence-Anfälle sind eine allgemeine Art von epileptischem Anfall, der sich durch kurzzeitige Wahrnehmungsstörungen bemerkbar macht. Kennzeichen eines Absence-Anfalls sind plötzlich auftretende Bewusstseinsstörungen, Unterbrechung von Tätigkeiten und ein leerer Blick. Die Absence-Epilepsie wird aber nicht von den bei Epilepsien allgemein bekannten Stürzen und Zuckungen (Myoklonien) bestimmt. Sie betrifft das ganze Gehirn (generalisiert), die Ursache ist in aller Regel unbekannt.",
+    "symptoms": ["Benommenheit","Zittern in Ruhe","Bewusstlosigkeit","kurzzeitig","Krämpfe","Desorientierung","zeitliche oder örtliche","Ohnmächtig fühlen"]
+    },
+    {
+    "disease_name": "Abszess an den Gaumenmandeln",
+    "disease_name_professional": "Peritonsillarabszess",
+    "description": "Nach einer Mandelentzündung kann sich im umgebenden Bindegewebe eine Entzündung mit Abszessbildung entwickeln. Ein Abszess kann sich aber auch entwickeln, wenn nach einer Mandelentfernung noch Reste der Mandeln in der Gaumenwand verblieben sind. Die Erreger der Entzündung sind in der überwiegenden Zahl der Fälle Streptokokken (Bakterien) oder Candida albicans (Pilze).",
+    "symptoms": ["Fieber","Halsschmerzen","Heiserkeit","Lymphknotenschwellung am Hals","Schluckschmerzen","Ohrenschmerzen"]
+    },
+    {
+    "disease_name": "Achillessehnenriss",
+    "disease_name_professional": "Achillessehnenruptur",
+    "description": "Durch Alterungsprozesse und Belastungen verändert sich die Struktur der Achillessehne. Es wird Fettgewebe in die Sehnen eingelagert oder sie verkalkt, so dass sie bei plötzlichen starken Anspannungen der Wadenmuskulatur die Kraft nicht mehr auf den Knochen übertragen kann und reisst.",
+    "symptoms": ["Wadenschmerzen","Muskelschwäche am Bein","Bewegungseinschränkung des Knöchels","Vergrösserte Wade"]
+    }
+]

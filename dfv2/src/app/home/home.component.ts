@@ -63,6 +63,7 @@ export class HomeComponent implements OnInit {
 
     this.user.sendSymptoms(symptomSend).subscribe((res) => {
       console.log(res);
+      
     });
   }
 

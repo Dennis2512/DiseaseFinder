@@ -11,20 +11,62 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const client_dto_1 = require("./client.dto");
+const data = __importStar(require("./../../allDiseasesGER.json"));
 var sampleData = '{ "Diseases" : [' +
     '{ "disease_name":"disease1" , "disease_name_professional":"disease1_professional1", "description":"disease1_description", "symptoms":"disease1_symptoms" },' +
     '{ "disease_name":"disease2" , "disease_name_professional":"disease2_professional1", "description":"disease2_description", "symptoms":"disease2_symptoms" },' +
     '{ "disease_name":"disease3" , "disease_name_professional":"disease3_professional1", "description":"disease3_description", "symptoms":"disease3_symptoms" }]}';
-function minCreator1() {
-    console.log(sampleData);
+function sampleCreator() {
     return sampleData;
 }
 ;
-function minFindDisease(userinput) {
-    return;
+var matchingDiseases;
+var asset = data;
+console.log(typeof (asset));
+function searchSymptom(symptomsToCheck, userinput) {
+    let insertable;
+    insertable = false;
+    for (let element in (symptomsToCheck)) {
+        let thisSymptomToCheck = symptomsToCheck[element];
+        console.log(thisSymptomToCheck);
+        if (thisSymptomToCheck === userinput.symptom) {
+            insertable = true;
+        }
+    }
+    ;
+    console.log(insertable);
+    return insertable;
+}
+function findDisease(userinput) {
+    for (let diseaseValue in (asset)) {
+        let disease = asset[diseaseValue];
+        let symptomsToCheck = disease.symptoms;
+        console.log(symptomsToCheck);
+        console.log(typeof (symptomsToCheck));
+        if (searchSymptom(symptomsToCheck, userinput) == true) {
+            matchingDiseases = disease;
+            console.log(matchingDiseases);
+            console.log("hat ein Match gefunden");
+        }
+        else {
+            console.log("hat kein Match gefunden");
+        }
+    }
+    console.log("Matching diseases: " + matchingDiseases);
+    if (matchingDiseases === null || matchingDiseases === undefined) {
+        matchingDiseases = JSON.parse('{"message":"!!!hat keine Krankheit gefunden!!!"}');
+    }
+    return matchingDiseases;
 }
 let MessagesController = class MessagesController {
     getSymptoms() {
@@ -45,10 +87,8 @@ let MessagesController = class MessagesController {
         }
     }
     sendSymptoms(userinput) {
-        console.log(userinput);
-        let sampleData = minCreator1();
-        console.log(sampleData);
-        return { sampleData };
+        console.log(userinput.symptom);
+        return findDisease(userinput);
     }
 };
 __decorate([
