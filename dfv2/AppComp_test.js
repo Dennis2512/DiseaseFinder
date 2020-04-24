@@ -21,6 +21,7 @@ Scenario('Testing App Component', (I) => {
     I.see('We don\'t cure cancer, but we sure come close.');
     
     I.click('DiseaseFinder Beta v.0.9.5');
+    I.click('#menu-toggle');
     I.see('Home');
     I.see('About us');
     I.see('Contact');

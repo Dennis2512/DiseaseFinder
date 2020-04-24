@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private user: UserService) { }
   symptoms: Object;
+  //symptoms: boolean = false;
 
 //Functions
   ngOnInit(): void {
@@ -34,14 +35,17 @@ export class HomeComponent implements OnInit {
     this.user.getMessage('1').subscribe((res) => {
       console.log(res);
     });
-    var lang = navigator.language;
-    if(lang !== "de"){
-      lang = "en";
-    }
+    var langCache = navigator.language;
+    var lang = ""+langCache.charAt(0);
+    lang = lang+langCache.charAt(1);
     if(lang==="de"){
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org ersetzt keinen Arzt! Wenden Sie sich bei medizinischen Notfällen an den Notdienst 112.";
       document.getElementById("search").innerHTML = "Suche";
       this.placeholder = "Symptom(e)";
+    }else if(lang==="ru"){
+      document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org не заменяет врача! В случае необходимости звоните 112.";
+      document.getElementById("search").innerHTML = "Поиск";
+      this.placeholder = "Симптомы";
     }else{
       document.getElementById("disclaimerSpan").innerHTML = "DiseaseFinder.org does not replace an actual doctor. Please call emergency services if necessary!";
       document.getElementById("search").innerHTML = "Search";
@@ -51,6 +55,7 @@ export class HomeComponent implements OnInit {
 
   searchBarUp(){
     this.searchUp = true;
+    //this.symptoms = true;
   }
 
   OnSymptomsInput(symptoms: string){
