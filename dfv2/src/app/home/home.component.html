@@ -9,11 +9,22 @@
     <small id="Disclaimer" class="form-text text-muted">
       <span id="disclaimerSpan"></span>
     </small>
+    <br>
 </div>
 <ul *ngIf="symptoms" >
-  test
-  <li *ngFor="let symptomDF of symptoms">
-    
-  </li>
+  <div  *ngFor="let symptomDF of symptoms">
+    <div class="diseases">
+      <div class="diseaseName"> 
+        <h2 class="diseaseNameT">{{ symptomDF.disease_name }}</h2>
+        <small class="diseaseNamePro"><span id="akaSpan">Alias: </span>{{ symptomDF.disease_name_professional }}</small>
+      </div>
+      <p><small class="diseaseDescription">{{ symptomDF.description }}</small></p>
+      <span id="diseaseSymptomsSpan" class="diseaseSymptomsT">Weitere Symptome von "{{ symptomDF.disease_name }}": </span>
+      <div class="diseaseSymptoms" *ngFor="let moreSymptoms of symptomDF.symptoms">
+        <div class="diseaseSymptom">{{ moreSymptoms }}</div>
+      </div>
+    </div>
+    <br>
+  </div>
 </ul>
 

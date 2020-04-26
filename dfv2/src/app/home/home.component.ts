@@ -26,8 +26,7 @@ export class HomeComponent implements OnInit {
   symptomInput: string = null;
 
   constructor(private user: UserService) { }
-  symptoms: Object;
-  //symptoms: boolean = false;
+  symptoms;
 
 //Functions
   ngOnInit(): void {
@@ -72,10 +71,10 @@ export class HomeComponent implements OnInit {
     }
 
     this.user.sendSymptoms(symptomSend).subscribe((res) => {
-      this.foundDiseases = res
-      console.log(this.foundDiseases);
-      //this.symptoms = res;
-      //console.log(this.symptoms);
+      //this.foundDiseases = res;
+      //console.log(this.foundDiseases);
+      this.symptoms = res;
+      console.log(this.symptoms);
 
     });
   }

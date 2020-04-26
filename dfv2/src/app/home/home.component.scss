@@ -1,3 +1,5 @@
+$backgroundcol: rgba(204, 204, 204, 0.226);
+
 .active{
     margin-top: -10%;
 }
@@ -13,3 +15,58 @@
     border-color: #4de2cc1f;;
 }
 
+.diseases{
+    background-color: $backgroundcol;
+    width: 90%;
+    border-radius: 5px;
+    border:1px solid #4acfbb00;
+    padding: 6px;
+}
+.diseases:hover{
+    border:1px solid #4acfbb80;
+    
+}
+
+.diseaseName{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border:1px solid #4acfbb00;
+    background-color: #51dac5;
+    color: white;
+    padding-bottom: -10px;
+    margin: -6px;
+
+}
+
+.diseaseNameT{
+    padding: 6px;
+}
+
+.diseaseNamePro{
+    position: relative;
+    top: -15px;
+    padding: 6px;
+}
+
+.diseaseDescriptionT{
+    position: relative;
+    top: 7px;
+    font-size: large;
+}
+
+.diseaseDescription{
+    position: relative;
+    top: 5px;
+
+}
+
+.diseaseSymptoms{
+
+}
+
+.diseaseSymptomsT{
+}
+
+.diseaseSymptom{
+    font-size: smaller;
+}
