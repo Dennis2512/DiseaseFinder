@@ -36,17 +36,23 @@ export class AppComponent implements OnInit {
 }
 
   ngOnInit(): void {
-    var lang = navigator.language;
-    if(lang !== "de"){
-      lang = "en";
-    }
+    var langCache = navigator.language;
+    var lang = ""+langCache.charAt(0);
+    lang = lang+langCache.charAt(1);
+
+
+
     console.log("language:"+lang);
     if(lang==="de"){
       document.getElementById("aboutUsSpan").innerHTML = "Über uns";
       document.getElementById("contactSpan").innerHTML = "Impressum";
+    }else if(lang==="ru"){
+      document.getElementById("aboutUsSpan").innerHTML = "Описание";
+      document.getElementById("contactSpan").innerHTML = "Контакт";
+      document.getElementById("HomeSpan").innerHTML = "Главная";
     }else{
       document.getElementById("aboutUsSpan").innerHTML = "About us";
-      document.getElementById("contactSpan").innerHTML = "Contact";;
+      document.getElementById("contactSpan").innerHTML = "Contact";
    
     }
 }

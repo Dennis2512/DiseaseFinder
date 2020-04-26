@@ -32,3 +32,10 @@
 }
 
 <span id="searchBarSpan" class="searchBarSpanStyle"></span>
+
+
+
+ <p class="name">{{ symptom.disease_name }}</p>
+
+
+ <p class="name">{{ symptom.disease_name }}</p>
