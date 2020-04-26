@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { ClientDto } from './client.dto';
 import * as testdata from './../../test.json';
 import * as data from './../../allDiseasesGER.json'
+import { Interface } from 'readline';
 
 //Test hardcoded 
 var sampleData = '{ "Diseases" : [' +
@@ -19,8 +20,9 @@ function  sampleCreator(){
 };
 
 //Minimal Approach to search for diseases with client inputdata without DB
-var matchingDiseases: JSON;
-
+//var matchingDiseases: Array<any>;
+var matchingDiseases:any[] = new Array (100);
+//var matchingDiseases: any;
 //matchingDiseases.parse = <any>[];
 var asset = <any>data;
 //console.log(asset);
@@ -58,6 +60,7 @@ function searchSymptom(symptomsToCheck: any, userinput: ClientDto){
 function findDisease(userinput: ClientDto){
     
     //suche nach matches des userinputs in JSON des Asset ordners
+    let i = 0;
     for (let diseaseValue in (asset)) {
         let disease = asset[diseaseValue];
         let symptomsToCheck = disease.symptoms;
@@ -65,12 +68,15 @@ function findDisease(userinput: ClientDto){
         console.log(typeof(symptomsToCheck));
 
         if(searchSymptom(symptomsToCheck, userinput) == true){
-
-            matchingDiseases = disease;
+            
+            matchingDiseases[i] = disease;
+            //matchingDiseases = disease;
+            
             console.log(matchingDiseases);
             console.log("hat ein Match gefunden");
             //break just for stable version, so we avoid the TypeError in the end of the Object iteration
             //break;
+            i++;
         }else{
             console.log("hat kein Match gefunden");
         }    
@@ -80,6 +86,8 @@ function findDisease(userinput: ClientDto){
     if (matchingDiseases === null || matchingDiseases === undefined){
         matchingDiseases = JSON.parse('{"message":"!!!hat keine Krankheit gefunden!!!"}');
     }
+    console.log(matchingDiseases);
+    //JSON.parse(matchingDiseases);
     return matchingDiseases;
 }
 

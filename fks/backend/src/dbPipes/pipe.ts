@@ -21,7 +21,7 @@ function  testCreator(){
 };
 testCreator();
 //const statementInsertTableLedger = `INSERT INTO ledger (id, date, amount, sender, receiver) VALUES ('p2pidp2p', 'p2pdatep2p', 'p2pamountp2p', 'p2psenderp2p','p2preceiverp2p')`
-*/
+*//*
 (async () => {
     let data1  = new (TestEntity);
     data1.disease_name = "testdata1";
@@ -53,7 +53,7 @@ testCreator();
         }finally{
             console.log("Daten wurden eingefügt");
         }
-})()
+})()*/
 
 
 /*

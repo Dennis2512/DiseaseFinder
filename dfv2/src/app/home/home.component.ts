@@ -19,6 +19,8 @@ import { UserService } from '../services/user.service';
 })
 export class HomeComponent implements OnInit {
   placeholder="Symptom"
+  foundDiseases: any=[];
+
 //Data variables
   searchUp: boolean = false;
   symptomInput: string = null;
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
 
 //Functions
   ngOnInit(): void {
+    
     
 
 
@@ -52,7 +55,6 @@ export class HomeComponent implements OnInit {
   searchBarUp(){
     this.searchUp = true;
   }
-
   OnSymptomsInput(symptoms: string){
     this.symptomInput = symptoms;
     console.log(this.symptomInput);
@@ -65,9 +67,10 @@ export class HomeComponent implements OnInit {
     }
 
     this.user.sendSymptoms(symptomSend).subscribe((res) => {
-      console.log(res);
-      this.symptoms = res;
-      console.log(this.symptoms);
+      this.foundDiseases = res
+      console.log(this.foundDiseases);
+      //this.symptoms = res;
+      //console.log(this.symptoms);
     });
   }
 

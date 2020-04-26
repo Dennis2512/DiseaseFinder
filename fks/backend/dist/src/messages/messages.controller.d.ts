@@ -6,5 +6,5 @@ export declare class MessagesController {
     getMessage(id: any): {
         message: string;
     };
-    sendSymptoms(userinput: ClientDto): JSON;
+    sendSymptoms(userinput: ClientDto): any[];
 }

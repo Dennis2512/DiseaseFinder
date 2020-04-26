@@ -30,7 +30,7 @@ function sampleCreator() {
     return sampleData;
 }
 ;
-var matchingDiseases;
+var matchingDiseases = new Array(10);
 var asset = data;
 console.log(typeof (asset));
 function searchSymptom(symptomsToCheck, userinput) {
@@ -48,15 +48,17 @@ function searchSymptom(symptomsToCheck, userinput) {
     return insertable;
 }
 function findDisease(userinput) {
+    let i = 0;
     for (let diseaseValue in (asset)) {
         let disease = asset[diseaseValue];
         let symptomsToCheck = disease.symptoms;
         console.log(symptomsToCheck);
         console.log(typeof (symptomsToCheck));
         if (searchSymptom(symptomsToCheck, userinput) == true) {
-            matchingDiseases = disease;
+            matchingDiseases[i] = disease;
             console.log(matchingDiseases);
             console.log("hat ein Match gefunden");
+            i++;
         }
         else {
             console.log("hat kein Match gefunden");
@@ -66,6 +68,7 @@ function findDisease(userinput) {
     if (matchingDiseases === null || matchingDiseases === undefined) {
         matchingDiseases = JSON.parse('{"message":"!!!hat keine Krankheit gefunden!!!"}');
     }
+    console.log(matchingDiseases);
     return matchingDiseases;
 }
 let MessagesController = class MessagesController {
