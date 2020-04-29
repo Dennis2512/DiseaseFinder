@@ -23,6 +23,7 @@ const httpOptions = {
 export class HomeComponent implements OnInit {
   placeholder = "Symptom";
   foundDiseases: any = [];
+  
 
   // autocomplete changes
   dropdownList = [];
@@ -32,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   //Data variables
   searchUp: boolean = false;
-  symptomInput: string = null;
+  symptomInput: Array<any> = null;
 
   constructor(private user: UserService) {}
   symptoms;
@@ -42,6 +43,15 @@ export class HomeComponent implements OnInit {
     this.user.getMessage("1").subscribe((res) => {
       console.log(res);
     });
+    //
+    var input = document.getElementById("inputList");
+    input.addEventListener("keyup", function(event){
+      if(event.keyCode === 13){
+        event.preventDefault();
+        document.getElementById("search").click();
+      }
+    });
+    //Sprache
     var langCache = navigator.language;
     var lang = "" + langCache.charAt(0);
     lang = lang + langCache.charAt(1);
@@ -390,12 +400,12 @@ export class HomeComponent implements OnInit {
     this.searchUp = true;
     //this.symptoms = true;
   }
-  OnSymptomsInput(symptoms: string) {
+  OnSymptomsInput(symptoms: Array<any>) {
     this.symptomInput = symptoms;
     console.log(this.symptomInput);
   }
 
-  OnUpload(symptoms: string) {
+  OnUpload(symptoms: Array<any>) {
     let symptomSend = {
       symptom: symptoms,
     };
@@ -414,10 +424,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  functionsWrapper(symptIn: string) {
+  functionsWrapper(symptIn: Array<any>) {
+    console.log("wrapper Inhalt: "+this.selectedItems);
     this.searchBarUp();
-    this.OnSymptomsInput(symptIn);
-    this.OnUpload(symptIn);
+    this.OnSymptomsInput(this.selectedItems);
+    this.OnUpload(this.selectedItems);
     this.OnDownload();
   }
 }

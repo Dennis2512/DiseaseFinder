@@ -1,5 +1,21 @@
 $backgroundcol: rgba(204, 204, 204, 0.226);
 
+.f-control{
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+}
+
+.b-control{
+    width: 25vw;
+    position: sticky;
+    left: 40vw;
+}
+
+@media (max-width: 768px){
+
+}
+
 .active{
     margin-top: -10%;
 }
@@ -60,12 +76,6 @@ $backgroundcol: rgba(204, 204, 204, 0.226);
 
 }
 
-.diseaseSymptoms{
-
-}
-
-.diseaseSymptomsT{
-}
 
 .diseaseSymptom{
     font-size: smaller;
