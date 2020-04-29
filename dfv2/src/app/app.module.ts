@@ -1,35 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { NgModule } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import{ FormsModule} from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatListModule} from '@angular/material/list';
-import {TextFieldModule} from '@angular/cdk/text-field';
-import {MatSelectModule, MatSelect} from '@angular/material/select';
-import { HttpClientModule } from '@angular/common/http';  
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { NgModule } from "@angular/core";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { FormsModule } from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+import { MatListModule } from "@angular/material/list";
+import { TextFieldModule } from "@angular/cdk/text-field";
+import { MatSelectModule, MatSelect } from "@angular/material/select";
+import { HttpClientModule } from "@angular/common/http";
 
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { StoryComponent } from "./story/story.component";
+import { AboutComponent } from "./about/about.component";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { StoryComponent } from './story/story.component';
-import { AboutComponent } from './about/about.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
-
-
+// autocomplete changes
+import { AngularMultiSelectModule } from "angular2-multiselect-dropdown";
+// end
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    StoryComponent,
-    AboutComponent
-  ],
+  declarations: [AppComponent, HomeComponent, StoryComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,8 +41,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatFormFieldModule,
     MatSelectModule,
     HttpClientModule,
+    // autocomplete changes
+    AngularMultiSelectModule,
+    FormsModule,
+    // end
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

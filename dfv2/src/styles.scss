@@ -1,216 +1,422 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 @font-face {
-    font-family: 'Cloud World';
-    src: url(fonts\CloudWorld-wOYn.ttf) format('truetype');
+  font-family: "Cloud World";
+  src: url(fonts\CloudWorld-wOYn.ttf) format("truetype");
 }
 //
 $primary: #4acfbb;
 $logo: #5bffe6;
 
-.footerpurpose{
-    min-height: 93.5vh;
+.footerpurpose {
+  min-height: 93.5vh;
 }
 
-.center{
-    //text-align: center;
-    margin-top: 17%;
+.center {
+  //text-align: center;
+  margin-top: 17%;
 }
 
-.menu_icon{
-    position: fixed;
-    top: 15px;
-    color: white;
+.menu_icon {
+  position: fixed;
+  top: 15px;
+  color: white;
 }
 
-.menu_icon_plus{
-    font-size: 52px;
-    cursor: pointer;
+.menu_icon_plus {
+  font-size: 52px;
+  cursor: pointer;
 }
 
-body{
-    margin: 0;
-    font-family: 'Nuntio', 'sans-serif';
-    font-size: 18px;
-    width: 100%;
-
+body {
+  margin: 0;
+  font-family: "Nuntio", "sans-serif";
+  font-size: 18px;
+  width: 100%;
+  height: 100vh;
 }
 
-.container{
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+
+.logo {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Cloud World";
+  font-size: 42px;
+  color: $logo;
+  font-weight: bold;
+  text-decoration: none;
+  :hover {
+    text-decoration: none;
+    color: $logo;
+  }
+}
+
+// autocomplete changes
+$base-color: #4acfbb;
+$btn-background: #fff;
+$btn-border: #ccc;
+$btn-text-color: #333;
+$btn-arrow: #333;
+
+$token-background: $base-color;
+$token-text-color: #fff;
+$token-remove-color: #fff;
+
+$box-shadow-color: #959595;
+$list-hover-background: #f5f5f5;
+$label-color: #4acfbb;
+$selected-background: #e9f4ff;
+
+.c-btn {
+  background: $btn-background;
+  border: 1px solid $btn-border;
+  color: $btn-text-color;
+}
+.selected-list {
+  .c-list {
+    .c-token {
+      background: $token-background;
+      .c-label {
+        color: $token-text-color;
+      }
+      .c-remove {
+        svg {
+          fill: $token-remove-color;
+        }
+      }
+    }
+  }
+  .c-angle-down,
+  .c-angle-up {
+    svg {
+      fill: $btn-arrow;
+    }
+  }
+}
+.dropdown-list {
+  ul {
+    li:hover {
+      background: $list-hover-background;
+    }
+  }
+}
+.arrow-up,
+.arrow-down {
+  border-bottom: 15px solid #fff;
+}
+
+.arrow-2 {
+  border-bottom: 15px solid #ccc;
+}
+.list-area {
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0px 1px 5px $box-shadow-color;
+}
+.select-all {
+  border-bottom: 1px solid #ccc;
+}
+.list-filter {
+  border-bottom: 1px solid #ccc;
+  .c-search {
+    svg {
+      fill: #888;
+    }
+  }
+  .c-clear {
+    svg {
+      fill: #888;
+    }
+  }
+}
+
+.pure-checkbox {
+  input[type="checkbox"]:focus + label:before,
+  input[type="checkbox"]:hover + label:before {
+    border-color: $base-color;
+    background-color: #f2f2f2;
+  }
+  input[type="checkbox"] + label {
+    color: $label-color;
+  }
+  input[type="checkbox"] + label:before {
+    color: $base-color;
+    border: 2px solid $base-color;
+  }
+  input[type="checkbox"] + label:after {
+    background-color: $base-color;
+  }
+  input[type="checkbox"]:disabled + label:before {
+    border-color: #cccccc;
+  }
+  input[type="checkbox"]:disabled:checked + label:before {
+    background-color: #cccccc;
+  }
+  input[type="checkbox"] + label:after {
+    border-color: #ffffff;
+  }
+  input[type="radio"]:checked + label:before {
+    background-color: white;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: $base-color;
+  }
+}
+.selected-item {
+  background: $selected-background;
+}
+// end
+
+@media only screen and (max-width: 600px) {
+  .logo {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    border-bottom: 0px;
-}
-
-.logo{
-    width: 80%;
-    margin: 0 auto;
-    font-family: 'Cloud World';
+    margin-left: 50px;
+    font-family: "Cloud World";
     font-size: 42px;
     color: $logo;
     font-weight: bold;
     text-decoration: none;
-    :hover{
-        text-decoration: none;
-        color: $logo;
+    :hover {
+      text-decoration: none;
+      color: $logo;
     }
+  }
 }
 
-@media only screen and (max-width: 600px){
-    .logo{
-        width: 80%;
-        margin: 0 auto;
-        margin-left: 50px;
-        font-family: 'Cloud World';
-        font-size: 42px;
-        color: $logo;
-        font-weight: bold;
-        text-decoration: none;
-        :hover{
-            text-decoration: none;
-            color: $logo;
-        }
-    }
+header {
+  //position: fixed;
+  margin-top: -0px;
+  background: $primary;
+  padding: 1em 0;
+  width: 100%;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-header{
-    //position: fixed;
-    margin-top: -0px;
-    background: $primary;
-    padding: 1em 0;
-    width: 100%;
-    a {
-        color: white;
-        text-decoration: none;
-    }
-}
+mat-sidenav-container {
+  min-height: 80.8vh;
+  height: 100%;
+  width: 100%;
+  .SideNavButton {
+    position: relative;
+    left: -14%;
+    top: 52px;
+    color: white;
+  }
 
-mat-sidenav-container{
-    min-height: 80.8vh;
-    height: 100%;
-    width: 100%;;
-    .SideNavButton {
-        position: relative;
-        left: -14%;
-        top: 52px;
-        color: white;
-    }
-    
+  .arrow_button {
+    font-size: 37px;
+    color: $primary;
+  }
 
-    
-    .arrow_button{
-        font-size: 37px;
-        color: $primary;
+  .listItems {
+    color: $logo;
+  }
+  mat-sidenav,
+  mat-sidenav-content {
+    padding: 0px;
+    //background-color: $logo;
+  }
+
+  mat-sidenav-content {
+    height: 1000px;
+    .motto {
+      background-color: $logo;
+      color: white;
+      font-family: "Nunito";
+      width: 100%;
     }
-    
-    .listItems{
-        color:$logo;
-    }
-    mat-sidenav, mat-sidenav-content{
-        padding: 0px;
-        //background-color: $logo;
-    }
-    
-    mat-sidenav-content{
-        height: 1000px;
-        .motto{
-            background-color: $logo;
-            color: white;
-            font-family: 'Nunito';
-            width: 100%;
-        }
-    }
-    
-    mat-sidenav{
-        background-color: $primary;
-        color: $primary;
-        width: 200px;
-    }
-    
+  }
+
+  mat-sidenav {
+    background-color: $primary;
+    color: $primary;
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-.btn-prime { 
-    color: #ffffff; 
-    background-color: #59D9C6; 
-    border-color: #4DDEC8; 
-  } 
-   
-  .btn-prime:hover, 
-  .btn-prime:focus, 
-  .btn-prime:active, 
-  .btn-prime.active, 
-  .open .dropdown-toggle.btn-prime { 
-    color: #ffffff; 
-    background-color: #4EC4B2; 
-    border-color: #4DDEC8; 
-  } 
-   
-  .btn-prime:active, 
-  .btn-prime.active, 
-  .open .dropdown-toggle.btn-prime { 
-    background-image: none; 
-  } 
-   
-  .btn-prime.disabled, 
-  .btn-prime[disabled], 
-  fieldset[disabled] .btn-prime, 
-  .btn-prime.disabled:hover, 
-  .btn-prime[disabled]:hover, 
-  fieldset[disabled] .btn-prime:hover, 
-  .btn-prime.disabled:focus, 
-  .btn-prime[disabled]:focus, 
-  fieldset[disabled] .btn-prime:focus, 
-  .btn-prime.disabled:active, 
-  .btn-prime[disabled]:active, 
-  fieldset[disabled] .btn-prime:active, 
-  .btn-prime.disabled.active, 
-  .btn-prime[disabled].active, 
-  fieldset[disabled] .btn-prime.active { 
-    background-color: #59D9C6; 
-    border-color: #4DDEC8; 
-  } 
-   
-  .btn-prime .badge { 
-    color: #59D9C6; 
-    background-color: #ffffff; 
-  }
+.btn-prime {
+  color: #ffffff;
+  background-color: #59d9c6;
+  border-color: #4ddec8;
+}
 
-  .form-prime{
-      display:block;
-      width:100%;
-      height:calc(1.5em + .75rem + 2px);
-      padding:.375rem .75rem;
-      font-size:1rem;
-      font-weight:400;
-      line-height:1.5;
-      color:#495057;
-      background-color:#fff;
-      background-clip:padding-box;
-      border:1px solid #4acfbb;
-      border-radius:.25rem;
-      transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
-    }@media (prefers-reduced-motion:reduce){
-          .form-prime{transition:none}}
-          .form-prime::-ms-expand{background-color:transparent;border:0}
-          .form-prime:-moz-focusring{color:transparent;text-shadow:0 0 0 #495057}
-          .form-prime:focus{color:#495057;background-color:#fff;border-color:#4acfbb;outline:0;box-shadow:0 0 0 .2rem #4acfbb4f}.form-prime::-webkit-input-placeholder{color:#6c757d;opacity:1}
-          .form-prime::-moz-placeholder{color:#6c757d;opacity:1}
-          .form-prime:-ms-input-placeholder{color:#6c757d;opacity:1}
-          .form-prime::-ms-input-placeholder{color:#6c757d;opacity:1}
-          .form-prime::placeholder{color:#6c757d;opacity:1}
-          .form-prime:disabled,.form-prime[readonly]{background-color:#e9ecef;opacity:1}select
-          .form-prime:focus::-ms-value{color:#495057;background-color:#fff}
-          .form-prime-file,.form-prime-range{display:block;width:100%}
-          .col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}
-          .col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}
-          .col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}.form-prime-plaintext{display:block;width:100%;padding:.375rem 0;margin-bottom:0;font-size:1rem;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}
-          .form-prime-plaintext.form-prime-lg,.form-prime-plaintext.form-prime-sm{padding-right:0;padding-left:0}
-          .form-prime-sm{height:calc(1.5em + .5rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}
-          .form-prime-lg{height:calc(1.5em + 1rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select
-          .form-prime[multiple],select.prime[size]{height:auto}textarea
-          .form-prime{height:auto}
+.btn-prime:hover,
+.btn-prime:focus,
+.btn-prime:active,
+.btn-prime.active,
+.open .dropdown-toggle.btn-prime {
+  color: #ffffff;
+  background-color: #4ec4b2;
+  border-color: #4ddec8;
+}
+
+.btn-prime:active,
+.btn-prime.active,
+.open .dropdown-toggle.btn-prime {
+  background-image: none;
+}
+
+.btn-prime.disabled,
+.btn-prime[disabled],
+fieldset[disabled] .btn-prime,
+.btn-prime.disabled:hover,
+.btn-prime[disabled]:hover,
+fieldset[disabled] .btn-prime:hover,
+.btn-prime.disabled:focus,
+.btn-prime[disabled]:focus,
+fieldset[disabled] .btn-prime:focus,
+.btn-prime.disabled:active,
+.btn-prime[disabled]:active,
+fieldset[disabled] .btn-prime:active,
+.btn-prime.disabled.active,
+.btn-prime[disabled].active,
+fieldset[disabled] .btn-prime.active {
+  background-color: #59d9c6;
+  border-color: #4ddec8;
+}
+
+.btn-prime .badge {
+  color: #59d9c6;
+  background-color: #ffffff;
+}
+
+.form-prime {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #4acfbb;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-prime {
+    transition: none;
+  }
+}
+.form-prime::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-prime:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #495057;
+}
+.form-prime:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #4acfbb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #4acfbb4f;
+}
+.form-prime::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-prime::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-prime:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-prime::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-prime::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-prime:disabled,
+.form-prime[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+select .form-prime:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+.form-prime-file,
+.form-prime-range {
+  display: block;
+  width: 100%;
+}
+.col-form-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+.col-form-label-lg {
+  padding-top: calc(0.5rem + 1px);
+  padding-bottom: calc(0.5rem + 1px);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.col-form-label-sm {
+  padding-top: calc(0.25rem + 1px);
+  padding-bottom: calc(0.25rem + 1px);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.form-prime-plaintext {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+.form-prime-plaintext.form-prime-lg,
+.form-prime-plaintext.form-prime-sm {
+  padding-right: 0;
+  padding-left: 0;
+}
+.form-prime-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+.form-prime-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+select .form-prime[multiple],
+select.prime[size] {
+  height: auto;
+}
+textarea .form-prime {
+  height: auto;
+}
