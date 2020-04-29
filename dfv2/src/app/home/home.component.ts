@@ -424,7 +424,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  functionsWrapper(symptIn: Array<any>) {
+  functionsWrapper() {
     console.log("wrapper Inhalt: "+this.selectedItems);
     this.searchBarUp();
     this.OnSymptomsInput(this.selectedItems);
