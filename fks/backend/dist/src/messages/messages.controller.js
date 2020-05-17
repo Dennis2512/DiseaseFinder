@@ -30,42 +30,39 @@ function sampleCreator() {
     return sampleData;
 }
 ;
-var matchingDiseases = new Array(10);
+var matchingDiseases = new Array();
 var asset = data;
-console.log(typeof (asset));
-function searchSymptom(symptomsToCheck, userinput) {
+function searchSymptom(symptomsToCheck, userSearchterm) {
     let insertable;
     insertable = false;
     for (let element in (symptomsToCheck)) {
         let thisSymptomToCheck = symptomsToCheck[element];
-        console.log(thisSymptomToCheck);
-        if (thisSymptomToCheck === userinput.symptom) {
+        if (thisSymptomToCheck === userSearchterm) {
             insertable = true;
         }
     }
     ;
-    console.log(insertable);
     return insertable;
 }
 function findDisease(userinput) {
-    let i = 0;
-    for (let diseaseValue in (asset)) {
-        let disease = asset[diseaseValue];
-        let symptomsToCheck = disease.symptoms;
-        console.log(symptomsToCheck);
-        console.log(typeof (symptomsToCheck));
-        if (searchSymptom(symptomsToCheck, userinput) == true) {
-            matchingDiseases[i] = disease;
-            console.log(matchingDiseases);
-            console.log("hat ein Match gefunden");
-            i++;
-        }
-        else {
-            console.log("hat kein Match gefunden");
+    var userSearchterm;
+    for (let k = 0; k < (Array(userinput.symptom)).length; k++) {
+        console.log(Object((userinput.symptom)[k]).itemName);
+        userSearchterm = Object((userinput.symptom)[k]).itemName;
+        for (let diseaseValue in (asset)) {
+            let disease = asset[diseaseValue];
+            let symptomsToCheck = disease.symptoms;
+            if (searchSymptom(symptomsToCheck, userSearchterm) == true) {
+                matchingDiseases.push(disease);
+                console.log(matchingDiseases);
+                console.log("hat ein Match gefunden");
+            }
+            else {
+            }
         }
     }
     console.log("Matching diseases: " + matchingDiseases);
-    if (matchingDiseases === null || matchingDiseases === undefined) {
+    if (matchingDiseases === null || matchingDiseases === undefined || matchingDiseases.length === 0) {
         matchingDiseases = JSON.parse('{"message":"!!!hat keine Krankheit gefunden!!!"}');
     }
     console.log(matchingDiseases);
@@ -90,7 +87,6 @@ let MessagesController = class MessagesController {
         }
     }
     sendSymptoms(userinput) {
-        console.log(userinput.symptom);
         return findDisease(userinput);
     }
 };

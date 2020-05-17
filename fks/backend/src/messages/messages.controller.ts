@@ -20,70 +20,63 @@ function  sampleCreator(){
 };
 
 //Minimal Approach to search for diseases with client inputdata without DB
-//var matchingDiseases: Array<any>;
-var matchingDiseases:any[] = new Array (100);
-//var matchingDiseases: any;
-//matchingDiseases.parse = <any>[];
+var matchingDiseases:any[] = new Array ();
 var asset = <any>data;
-//console.log(asset);
-console.log(typeof(asset));
-
 
 /**
  * 
  * @param symptomsToCheck 
- * @param userinput
+ * @param userSearchterm
  * @returns {boolean} 
  */
-function searchSymptom(symptomsToCheck: any, userinput: ClientDto){
+function searchSymptom(symptomsToCheck: any, userSearchterm: string){
     let insertable: boolean;
     insertable = false;
 
-    //symptomsToCheck.forEach(element => {
     for (let element in (symptomsToCheck)) {
+        //thisSymptomToCheck ist der jeweilige String, der auf den UserInput untersucht wird
         let thisSymptomToCheck = symptomsToCheck[element];
-        console.log (thisSymptomToCheck);
-        //console.log(typeof(element));
-        if(thisSymptomToCheck === userinput.symptom){
+
+        if(thisSymptomToCheck === userSearchterm){
             insertable = true;
         } 
               
     };
-    console.log(insertable);
     return insertable;
 }
 /**
  * 
  * @param userinput 
+ * @param userSearchterm {string}
  * @returns {JSON}
  */
 function findDisease(userinput: ClientDto){
-    
-    //suche nach matches des userinputs in JSON des Asset ordners
-    let i = 0;
-    for (let diseaseValue in (asset)) {
-        let disease = asset[diseaseValue];
-        let symptomsToCheck = disease.symptoms;
-        console.log(symptomsToCheck);
-        console.log(typeof(symptomsToCheck));
+    var userSearchterm: string;
+    for(let k = 0; k < (Array(userinput.symptom)).length; k++){
+        console.log(Object((userinput.symptom)[k]).itemName)
+        userSearchterm = Object((userinput.symptom)[k]).itemName;
 
-        if(searchSymptom(symptomsToCheck, userinput) == true){
-            
-            matchingDiseases[i] = disease;
-            //matchingDiseases = disease;
-            
-            console.log(matchingDiseases);
-            console.log("hat ein Match gefunden");
-            //break just for stable version, so we avoid the TypeError in the end of the Object iteration
-            //break;
-            i++;
-        }else{
-            console.log("hat kein Match gefunden");
-        }    
+
+        //suche nach matches des userinputs in JSON des Asset ordners
+        for (let diseaseValue in (asset)) {
+            let disease = asset[diseaseValue];
+            //symptomsToCheck ist ein Objekt in dem alle Symptome der Krankheit dieser Iteration sind
+            let symptomsToCheck = disease.symptoms;
+
+            if(searchSymptom(symptomsToCheck, userSearchterm) == true){
+                
+                matchingDiseases.push(disease);            
+                console.log(matchingDiseases);
+                console.log("hat ein Match gefunden");
+            }else{
+                //console.log("hat kein Match gefunden");
+            }    
+        }
     }
+
     //gebe alle Krankheiten zurück die in den Symptomen den einen oder mehrere Userinputs besitzen
     console.log("Matching diseases: " + matchingDiseases);
-    if (matchingDiseases === null || matchingDiseases === undefined){
+    if (matchingDiseases === null || matchingDiseases === undefined || matchingDiseases.length === 0){
         matchingDiseases = JSON.parse('{"message":"!!!hat keine Krankheit gefunden!!!"}');
     }
     console.log(matchingDiseases);
@@ -119,13 +112,10 @@ export class MessagesController {
     }
 
     @Post()
-    sendSymptoms(@Body() userinput: ClientDto){
-        console.log(userinput.symptom);
-        
-        //Client gets sampleData for its input
+    sendSymptoms(@Body() userinput: ClientDto){        
         /*No use when actual disease can be find
+        //Client gets sampleData for its input
         let sampleData = sampleCreator();
-        console.log(sampleData);
         return {sampleData};
         */
 
