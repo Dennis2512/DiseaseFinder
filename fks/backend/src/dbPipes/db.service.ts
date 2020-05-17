@@ -26,7 +26,7 @@ export class DbService {
         private diseaseDeRepository: Repository<DiseaseDe>,
 
         @InjectRepository(Praxis)
-        private praxisRepository: Repository<Praxis>,*//*
+        private praxisRepository: Repository<Praxis>,*/
     ) { }
 
     //CRUD Functions for TestEntity
